@@ -33,7 +33,7 @@ M.options = {
 		base = "black",
 		border = "gray04",
 		link = "gray15",
-		panel = "black",
+		panel = "gray03",
 
 		error = "red",
 		hint = "green",
