@@ -36,7 +36,7 @@ M.options = {
 		panel = "black",
 
 		error = "red",
-		hint = "cyan",
+		hint = "green",
 		info = "cyan",
 		ok = "green",
 		warn = "orange",
