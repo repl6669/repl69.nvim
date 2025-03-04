@@ -31,13 +31,20 @@ local variants = {
 		foreground = hsl(0, 0, 88),
 
 		cyan = hsl(180, 90, 24),
+
 		green = hsl(158, 90, 42),
-		darkgreen = hsl(120, 100, 18),
+		light_green = hsl(158, 40, 42),
+		dark_green = hsl(120, 100, 18),
+
 		blue = hsl(210, 90, 48),
 		darkblue = hsl(240, 90, 25),
 		purple = hsl(282, 90, 40),
+
 		orange = hsl(25, 100, 40),
+
 		red = hsl(0, 100, 60),
+		light_red = hsl(0, 40, 60),
+
 		yellow = hsl(60, 100, 75),
 
 		none = "NONE",
