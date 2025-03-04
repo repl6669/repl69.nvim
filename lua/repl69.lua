@@ -152,7 +152,7 @@ local function set_highlights()
 		LspReferenceWrite = { bg = palette.gray06 },
 		Macro = { fg = palette.white, bold = styles.bold },
 		Number = { fg = palette.gray09, bold = styles.bold },
-		Operator = { fg = palette.white, bold = styles.bold },
+		Operator = { fg = palette.gray15, bold = styles.bold },
 		PreCondit = { fg = palette.white, bold = styles.bold },
 		PreProc = { link = "PreCondit" },
 		Repeat = { fg = palette.white },
@@ -856,7 +856,7 @@ local function set_highlights()
 		AlphaShortcut = { fg = palette.gray19 },
 
 		-- github/copilot.vim
-		CopilotSuggestion = { fg = palette.gray04, italic = styles.italic },
+		CopilotSuggestion = { fg = palette.gray09, italic = styles.italic },
 
 		-- nvim-treesitter/nvim-treesitter-context
 		TreesitterContext = { bg = palette.gray01 },
@@ -919,6 +919,10 @@ local function set_highlights()
 		AvanteReversedSubtitle = { fg = palette.gray17 },
 		AvanteThirdTitle = { fg = palette.gray05, bg = palette.gray15 },
 		AvanteReversedThirdTitle = { fg = palette.gray15 },
+		AvanteConflictCurrent = { fg = palette.black, bg = palette.orange },
+		AvanteConflictIncoming = { fg = palette.black, bg = palette.green },
+		AvanteConflictCurrentLabel = { fg = palette.gray03, bg = palette.orange, blend = 80 },
+		AvanteConflictIncomingLabel = { fg = palette.gray03, bg = palette.green, blend = 80 },
 
 		-- Saghen/blink.cmp
 		BlinkCmpDoc = { fg = palette.gray21 },
@@ -1082,22 +1086,22 @@ local function set_highlights()
 
 	--- Terminal
 	if config.options.enable.terminal then
-		vim.g.terminal_color_0 = palette.gray06
-		vim.g.terminal_color_1 = palette.gray08
-		vim.g.terminal_color_2 = palette.gray10
-		vim.g.terminal_color_3 = palette.gray12
-		vim.g.terminal_color_4 = palette.gray16
-		vim.g.terminal_color_5 = palette.gray14
-		vim.g.terminal_color_6 = palette.gray19
-		vim.g.terminal_color_7 = palette.gray21
-		vim.g.terminal_color_8 = palette.gray07
-		vim.g.terminal_color_9 = palette.gray09
-		vim.g.terminal_color_10 = palette.gray11
-		vim.g.terminal_color_11 = palette.gray13
-		vim.g.terminal_color_12 = palette.gray17
-		vim.g.terminal_color_13 = palette.gray15
-		vim.g.terminal_color_14 = palette.gray20
-		vim.g.terminal_color_15 = palette.white
+		vim.g.terminal_color_0 = palette.gray06 -- overlay
+		vim.g.terminal_color_1 = palette.gray08 -- love
+		vim.g.terminal_color_2 = palette.gray10 -- pine
+		vim.g.terminal_color_3 = palette.gray12 -- gold
+		vim.g.terminal_color_4 = palette.gray16 -- foam
+		vim.g.terminal_color_5 = palette.gray14 -- iris
+		vim.g.terminal_color_6 = palette.gray19 -- rose
+		vim.g.terminal_color_7 = palette.gray21 -- text
+		vim.g.terminal_color_8 = palette.gray07 -- subtle
+		vim.g.terminal_color_9 = palette.gray09 -- love
+		vim.g.terminal_color_10 = palette.gray11 -- pine
+		vim.g.terminal_color_11 = palette.gray13 -- gold
+		vim.g.terminal_color_12 = palette.gray17 -- foam
+		vim.g.terminal_color_13 = palette.gray15 -- iris
+		vim.g.terminal_color_14 = palette.gray20 -- rose
+		vim.g.terminal_color_15 = palette.white -- text
 
 		-- Support StatusLineTerm & StatusLineTermNC from vim
 		vim.cmd([[
