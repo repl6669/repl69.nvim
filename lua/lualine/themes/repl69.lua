@@ -18,7 +18,7 @@ return {
 		c = { bg = bg_base, fg = palette.gray21 },
 	},
 	visual = {
-		a = { bg = palette.blue, fg = palette.black, gui = "bold" },
+		a = { bg = palette.cyan, fg = palette.black, gui = "bold" },
 		b = { bg = palette.gray06, fg = palette.gray16 },
 		c = { bg = bg_base, fg = palette.gray21 },
 	},
@@ -28,7 +28,7 @@ return {
 		c = { bg = bg_base, fg = palette.gray21 },
 	},
 	command = {
-		a = { bg = palette.cyan, fg = palette.black, gui = "bold" },
+		a = { bg = palette.orange, fg = palette.black, gui = "bold" },
 		b = { bg = palette.gray06, fg = palette.gray16 },
 		c = { bg = bg_base, fg = palette.gray21 },
 	},
