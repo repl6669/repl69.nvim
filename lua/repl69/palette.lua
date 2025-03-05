@@ -55,17 +55,17 @@ grayscale = vim.tbl_extend("keep", grayscale, {
 ---@type table<string, string>
 local colors = {
 	cyan = hsl(180, 90, 24), -- #067474
-	cyan100 = hsl(180, 90, 70), -- #00FBF9
+	cyan100 = hsl(180, 90, 70), -- #00fbf9
 	cyan300 = hsl(180, 90, 50), -- #0df2f2
 	cyan500 = hsl(180, 90, 35), -- #09aaaa
 	cyan700 = hsl(180, 90, 20), -- #056161
 	cyan900 = hsl(180, 90, 10), -- #033030
 
 	green = hsl(158, 90, 42), -- #0bcb85
-	green100 = hsl(158, 90, 70), -- #00FBC0
+	green100 = hsl(158, 90, 70), -- #00fbc0
 	green300 = hsl(158, 90, 50), -- #0df29e
 	green500 = hsl(158, 90, 35), -- #09aa6f
-	green700 = hsl(158, 90, 20), -- #00623C
+	green700 = hsl(158, 90, 20), -- #00623c
 	green900 = hsl(158, 90, 10), -- #033020
 
 	blue = hsl(240, 90, 42), -- #0b0bcb
@@ -76,32 +76,32 @@ local colors = {
 	blue900 = hsl(240, 90, 15), -- #040449
 
 	purple = hsl(282, 90, 40), -- #8b0ac2
-	purple100 = hsl(282, 90, 70), -- #DD66FF
-	purple300 = hsl(282, 90, 50), -- #BD00FB
-	purple500 = hsl(282, 90, 35), -- #8500B0
-	purple700 = hsl(282, 90, 20), -- #4C0064
-	purple900 = hsl(282, 90, 15), -- #3A004B
+	purple100 = hsl(282, 90, 70), -- #dd66ff
+	purple300 = hsl(282, 90, 50), -- #bd00fb
+	purple500 = hsl(282, 90, 35), -- #8500b0
+	purple700 = hsl(282, 90, 20), -- #4c0064
+	purple900 = hsl(282, 90, 15), -- #3a004b
 
-	orange = hsl(25, 100, 40), -- #DC4A00
-	orange100 = hsl(25, 100, 70), -- #FFA056
-	orange300 = hsl(25, 100, 50), -- #FF5C00
-	orange500 = hsl(25, 100, 35), -- #C04100
-	orange700 = hsl(25, 100, 20), -- #6F2500
-	orange900 = hsl(25, 100, 15), -- #531B00
+	orange = hsl(25, 100, 40), -- #dc4a00
+	orange100 = hsl(25, 100, 70), -- #ffa056
+	orange300 = hsl(25, 100, 50), -- #ff5c00
+	orange500 = hsl(25, 100, 35), -- #c04100
+	orange700 = hsl(25, 100, 20), -- #6f2500
+	orange900 = hsl(25, 100, 15), -- #531b00
 
-	red = hsl(0, 100, 60), -- #FF001E
-	red100 = hsl(0, 100, 70), -- #FF565E
-	red300 = hsl(0, 100, 50), -- ##F00000
-	red500 = hsl(0, 100, 35), -- #C30000
+	red = hsl(0, 100, 60), -- #ff001e
+	red100 = hsl(0, 100, 70), -- #ff565e
+	red300 = hsl(0, 100, 50), -- ##f00000
+	red500 = hsl(0, 100, 35), -- #c30000
 	red700 = hsl(0, 100, 20), -- #700000
 	red900 = hsl(0, 100, 15), -- #540000
 
-	yellow = hsl(60, 100, 75), -- #FEFF67
-	yellow100 = hsl(60, 100, 80), -- #FEFF89
-	yellow300 = hsl(60, 100, 50), -- #FEFF00
-	yellow500 = hsl(60, 100, 40), -- #CBCC00
-	yellow700 = hsl(60, 100, 25), -- #7F7F00
-	yellow900 = hsl(60, 100, 15), -- #4C4C00
+	yellow = hsl(60, 100, 75), -- #feff67
+	yellow100 = hsl(60, 100, 80), -- #feff89
+	yellow300 = hsl(60, 100, 50), -- #feff00
+	yellow500 = hsl(60, 100, 40), -- #cbcc00
+	yellow700 = hsl(60, 100, 25), -- #7f7f00
+	yellow900 = hsl(60, 100, 15), -- #4c4c00
 }
 
 local variants = {
