@@ -48,7 +48,7 @@ local function set_highlights()
 		FoldColumn = { fg = palette.gray850 },
 		Folded = { fg = palette.gray50, bg = groups.panel },
 		IncSearch = { link = "CurSearch" },
-		LineNr = { fg = palette.gray850 },
+		LineNr = { fg = palette.gray800 },
 		MatchParen = { fg = palette.gray500, bg = palette.gray500, blend = 25 },
 		ModeMsg = { fg = palette.gray500 },
 		MoreMsg = { fg = palette.gray300 },
