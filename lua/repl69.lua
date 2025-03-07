@@ -1090,22 +1090,37 @@ local function set_highlights()
 
 	--- Terminal
 	if config.options.enable.terminal then
-		vim.g.terminal_color_0 = palette.gray750 -- overlay
-		vim.g.terminal_color_1 = palette.gray650 -- love
-		vim.g.terminal_color_2 = palette.gray550 -- pine
-		vim.g.terminal_color_3 = palette.gray450 -- gold
-		vim.g.terminal_color_4 = palette.gray250 -- foam
-		vim.g.terminal_color_5 = palette.gray350 -- iris
-		vim.g.terminal_color_6 = palette.gray100 -- rose
-		vim.g.terminal_color_7 = palette.gray25 -- text
-		vim.g.terminal_color_8 = palette.gray700 -- subtle
-		vim.g.terminal_color_9 = palette.gray600 -- love
-		vim.g.terminal_color_10 = palette.gray500 -- pine
-		vim.g.terminal_color_11 = palette.gray400 -- gold
-		vim.g.terminal_color_12 = palette.gray200 -- foam
-		vim.g.terminal_color_13 = palette.gray300 -- iris
-		vim.g.terminal_color_14 = palette.gray50 -- rose
-		vim.g.terminal_color_15 = palette.white -- text
+		-- Dark
+		vim.g.terminal_color_0 = palette.gray750
+		vim.g.terminal_color_8 = palette.gray700
+
+		-- Light
+		vim.g.terminal_color_7 = palette.gray25
+		vim.g.terminal_color_15 = palette.white
+
+		-- Red
+		vim.g.terminal_color_1 = palette.gray650
+		vim.g.terminal_color_9 = palette.gray600
+
+		-- Green
+		vim.g.terminal_color_2 = palette.gray550
+		vim.g.terminal_color_10 = palette.gray500
+
+		-- Yellow
+		vim.g.terminal_color_3 = palette.gray450
+		vim.g.terminal_color_11 = palette.gray400
+
+		-- Blue
+		vim.g.terminal_color_4 = palette.gray250
+		vim.g.terminal_color_12 = palette.gray200
+
+		-- Magenta
+		vim.g.terminal_color_5 = palette.gray350
+		vim.g.terminal_color_13 = palette.gray300
+
+		-- Cyan
+		vim.g.terminal_color_6 = palette.gray100
+		vim.g.terminal_color_14 = palette.gray50
 
 		-- Support StatusLineTerm & StatusLineTermNC from vim
 		vim.cmd([[
