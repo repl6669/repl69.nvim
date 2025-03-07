@@ -1,6 +1,6 @@
 theme:
   unstagedChangesColor:
-    - "#FF5C00"
+    - "#c04100"
   selectedLineBgColor:
     - "#1f1f1f"
   searchingActiveBorderColor:
@@ -21,4 +21,4 @@ theme:
     - "bold"
 
 authorColors:
-  "*": "#0df29e"
+  "*": "#09aa6f"
