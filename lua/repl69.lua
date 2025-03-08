@@ -620,7 +620,21 @@ local function set_highlights()
 		TelescopeSelectionCaret = { fg = palette.gray100, bg = palette.gray750 },
 		TelescopeTitle = { fg = palette.gray200, bold = styles.bold },
 
+		-- williamboman/mason.nvim
+		-- https://github.com/williamboman/mason.nvim/blob/main/lua/mason/ui/colors.lua
+		MasonHeader = { fg = palette.black, bg = palette.orange500 },
+		MasonHighlight = { link = "@punctuation.special" },
+		MasonHighlightBlock = { fg = palette.black, bg = palette.orange500 },
+		MasonHighlightBlockBold = { fg = palette.black, bg = palette.orange500, bold = styles.bold },
+		MasonHighlightSecondary = { fg = palette.cyan700 },
+		MasonHighlightBlockSecondary = { fg = palette.fg, bg = palette.cyan700 },
+		MasonHighlightBlockBoldSecondary = { fg = palette.fg, bg = palette.cyan700, bold = styles.bold },
+		MasonMuted = { link = "Visual" },
+		MasonMutedBlock = { link = "Visual" },
+		MasonMutedBlockBold = { link = "Visual", bold = styles.bold },
+
 		-- ibhagwan/fzf-lua
+		-- https://github.com/ibhagwan/fzf-lua?tab=readme-ov-file#highlight-groups
 		FzfLuaBorder = make_border(),
 		FzfLuaCursor = { link = "IncSearch" },
 		FzfLuaDirPart = { fg = palette.gray700 },
@@ -636,6 +650,8 @@ local function set_highlights()
 		FzfLuaNormal = { link = "NormalFloat" },
 		FzfLuaPreviewTitle = { fg = palette.fg, bg = groups.panel },
 		FzfLuaTitle = { link = "FloatTitle" },
+		FzfLuaLivePrompt = { fg = palette.orange500 },
+		FzfLuaLiveSym = { fg = palette.orange500 },
 
 		-- rcarriga/nvim-notify
 		NotifyBackground = { link = "NormalFloat" },
