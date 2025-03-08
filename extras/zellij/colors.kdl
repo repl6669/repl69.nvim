@@ -4,7 +4,7 @@
 
 themes {
 	repl69-color {
-		fg "#a3a3a3"
+		fg "#7a7a7a"
 	    bg "#000000"
 		black "#000000"
 		red "#4e4e4e"
@@ -13,7 +13,7 @@ themes {
 		blue "#525252"
 		magenta "#3d3d3d"
 		cyan "#3d3d3d"
-		white "#a3a3a3"
+		white "#7a7a7a"
 		orange "#dc4a00"
 	};
 }
