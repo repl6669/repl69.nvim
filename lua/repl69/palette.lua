@@ -2,58 +2,31 @@ local options = require("repl69.config").options
 local hsl = require("repl69.util").hslToHex
 
 ---@type table<string, string>
-local grayscale = {
-	black = hsl(0, 0, 0),
-	gray04 = hsl(0, 0, 4),
-	gray08 = hsl(0, 0, 8),
-	gray12 = hsl(0, 0, 12),
-	gray16 = hsl(0, 0, 16),
-	gray20 = hsl(0, 0, 20),
-	gray24 = hsl(0, 0, 24),
-	gray28 = hsl(0, 0, 28),
-	gray32 = hsl(0, 0, 32),
-	gray36 = hsl(0, 0, 36),
-	gray40 = hsl(0, 0, 40),
-	gray44 = hsl(0, 0, 44),
-	gray48 = hsl(0, 0, 48),
-	gray52 = hsl(0, 0, 52),
-	gray56 = hsl(0, 0, 56),
-	gray60 = hsl(0, 0, 60),
-	gray64 = hsl(0, 0, 64),
-	gray68 = hsl(0, 0, 68),
-	gray72 = hsl(0, 0, 72),
-	gray76 = hsl(0, 0, 76),
-	gray80 = hsl(0, 0, 80),
-	gray84 = hsl(0, 0, 84),
-	white = hsl(0, 0, 88),
-}
-
-grayscale = vim.tbl_extend("keep", grayscale, {
-	gray25 = grayscale.gray84, -- #d6d6d6
-	gray50 = grayscale.gray80, -- #cccccc
-	gray100 = grayscale.gray76, -- #c2c2c2
-	gray150 = grayscale.gray72, -- #b8b8b8
-	gray200 = grayscale.gray68, -- #adadad
-	gray250 = grayscale.gray64, -- #a3a3a3
-	gray300 = grayscale.gray60, -- #999999
-	gray350 = grayscale.gray56, -- #8f8f8f
-	gray400 = grayscale.gray52, -- #858585
-	gray450 = grayscale.gray48, -- #7a7a7a
-	gray500 = grayscale.gray44, -- #707070
-	gray550 = grayscale.gray40, -- #666666
-	gray600 = grayscale.gray36, -- #5c5c5c
-	gray650 = grayscale.gray32, -- #525252
-	gray700 = grayscale.gray28, -- #474747
-	gray750 = grayscale.gray24, -- #3d3d3d
-	gray800 = grayscale.gray20, -- #333333
-	gray850 = grayscale.gray16, -- #292929
-	gray900 = grayscale.gray12, -- #1f1f1f
-	gray925 = grayscale.gray08, -- #141414
-	gray950 = grayscale.gray04, -- #0a0a0a
-})
-
----@type table<string, string>
 local colors = {
+	black = hsl(0, 0, 0), -- #000000
+	gray25 = hsl(0, 0, 84), -- #d6d6d6
+	gray50 = hsl(0, 0, 80), -- #cccccc
+	gray100 = hsl(0, 0, 76), -- #c2c2c2
+	gray150 = hsl(0, 0, 72), -- #b8b8b8
+	gray200 = hsl(0, 0, 68), -- #adadad
+	gray250 = hsl(0, 0, 64), -- #a3a3a3
+	gray300 = hsl(0, 0, 60), -- #999999
+	gray350 = hsl(0, 0, 56), -- #8f8f8f
+	gray400 = hsl(0, 0, 52), -- #858585
+	gray450 = hsl(0, 0, 48), -- #7a7a7a
+	gray500 = hsl(0, 0, 44), -- #707070
+	gray550 = hsl(0, 0, 40), -- #666666
+	gray600 = hsl(0, 0, 36), -- #5c5c5c
+	gray650 = hsl(0, 0, 32), -- #525252
+	gray700 = hsl(0, 0, 28), -- #474747
+	gray750 = hsl(0, 0, 24), -- #3d3d3d
+	gray800 = hsl(0, 0, 20), -- #333333
+	gray850 = hsl(0, 0, 16), -- #292929
+	gray900 = hsl(0, 0, 12), -- #1f1f1f
+	gray925 = hsl(0, 0, 8), -- #141414
+	gray950 = hsl(0, 0, 4), -- #0a0a0a
+	white = hsl(0, 0, 88), -- #e0e0e0
+
 	cyan = hsl(180, 90, 24), -- #067474
 	cyan100 = hsl(180, 90, 70), -- #00fbf9
 	cyan300 = hsl(180, 90, 50), -- #0df2f2
@@ -72,15 +45,22 @@ local colors = {
 	blue100 = hsl(240, 90, 60), -- #3d3df5
 	blue300 = hsl(240, 90, 50), -- #0d0df2
 	blue500 = hsl(240, 90, 35), -- #0909aa
-	blue700 = hsl(240, 90, 20), -- #050561
+	blue700 = hsl(240, 90, 25), -- #050561
 	blue900 = hsl(240, 90, 15), -- #040449
 
-	purple = hsl(282, 90, 40), -- #8b0ac2
-	purple100 = hsl(282, 90, 70), -- #dd66ff
-	purple300 = hsl(282, 90, 50), -- #bd00fb
-	purple500 = hsl(282, 90, 35), -- #8500b0
-	purple700 = hsl(282, 90, 20), -- #4c0064
-	purple900 = hsl(282, 90, 15), -- #3a004b
+	pink = hsl(320, 80, 40), -- #C80084
+	pink100 = hsl(320, 80, 70), -- #FF6CCA
+	pink300 = hsl(320, 80, 55), -- #FD00AE
+	pink500 = hsl(320, 80, 45), -- #E10095
+	pink700 = hsl(320, 80, 35), -- #AF0074
+	pink900 = hsl(320, 80, 25), -- #7D0052
+
+	purple = hsl(265, 90, 40), -- #5F00C9
+	purple100 = hsl(265, 90, 70), -- #B16AFF
+	purple300 = hsl(265, 90, 55), -- #861AFD
+	purple500 = hsl(265, 90, 45), -- #6B00E3
+	purple700 = hsl(265, 90, 35), -- #5300B0
+	purple900 = hsl(265, 90, 25), -- #3C017E
 
 	orange = hsl(25, 100, 40), -- #dc4a00
 	orange100 = hsl(25, 100, 70), -- #ffa056
@@ -105,9 +85,9 @@ local colors = {
 }
 
 local variants = {
-	main = vim.tbl_extend("keep", grayscale, colors, {
-		background = grayscale.black, -- #000000
-		foreground = grayscale.white, -- #e0e0e0
+	main = vim.tbl_extend("keep", colors, {
+		background = colors.black, -- #000000
+		foreground = colors.white, -- #e0e0e0
 
 		none = "NONE",
 	}),
