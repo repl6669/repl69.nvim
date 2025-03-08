@@ -1,5 +1,5 @@
 local options = require("repl69.config").options
-local hsl = require("repl69.utils.hsl").hslToHex
+local hsl = require("repl69.util").hslToHex
 
 ---@type table<string, string>
 local grayscale = {

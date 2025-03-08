@@ -1,15 +1,15 @@
 local M = {}
 local config = require("repl69.config")
+local util = require("repl69.util")
 
 local function set_highlights()
-	local colors = require("repl69.utils.colors")
 	local palette = require("repl69.palette")
 	local styles = config.options.styles
 
 	local groups = {}
 
 	for group, color in pairs(config.options.groups) do
-		groups[group] = colors.parse_color(color)
+		groups[group] = util.parse_color(color)
 	end
 
 	local function make_border(fg)
@@ -25,7 +25,7 @@ local function set_highlights()
 	local default_highlights = {
 		ColorColumn = { bg = palette.gray925 },
 		Conceal = { bg = palette.none },
-		CurSearch = { fg = palette.black, bg = palette.green, blend = 60 },
+		CurSearch = { fg = palette.black, bg = palette.green, blend = 0.6 },
 		Cursor = { fg = palette.gray50, bg = palette.gray700 },
 		CursorColumn = { bg = palette.gray925 },
 		-- CursorIM = {},
@@ -33,10 +33,10 @@ local function set_highlights()
 		CursorLineNr = { fg = palette.gray450, bold = styles.bold },
 		-- DarkenedPanel = { },
 		-- DarkenedStatusline = {},
-		DiffAdd = { bg = groups.git_add, blend = 20 },
-		DiffChange = { bg = groups.git_change, blend = 20 },
-		DiffDelete = { bg = groups.git_delete, blend = 20 },
-		DiffText = { bg = groups.git_text, blend = 40 },
+		DiffAdd = { bg = groups.git_add, blend = 0.2 },
+		DiffChange = { bg = groups.git_change, blend = 0.2 },
+		DiffDelete = { bg = groups.git_delete, blend = 0.2 },
+		DiffText = { bg = groups.git_text, blend = 0.4 },
 		diffAdded = { link = "DiffAdd" },
 		diffChanged = { link = "DiffChange" },
 		diffRemoved = { link = "DiffDelete" },
@@ -71,7 +71,7 @@ local function set_highlights()
 		RedrawDebugClear = { fg = palette.black, bg = palette.gray400 },
 		RedrawDebugComposed = { fg = palette.black, bg = palette.gray500 },
 		RedrawDebugRecompose = { fg = palette.black, bg = palette.gray600 },
-		Search = { fg = palette.gray50, bg = palette.gray400, blend = 20 },
+		Search = { fg = palette.gray50, bg = palette.gray400, blend = 0.2 },
 		SignColumn = { fg = palette.gray50, bg = "NONE" },
 		SpecialKey = { fg = palette.gray200 },
 		SpellBad = { sp = palette.gray500, undercurl = true },
@@ -79,22 +79,22 @@ local function set_highlights()
 		SpellLocal = { sp = palette.gray500, undercurl = true },
 		SpellRare = { sp = palette.gray500, undercurl = true },
 		StatusLine = { fg = palette.gray500, bg = groups.panel },
-		StatusLineNC = { fg = palette.gray850, bg = groups.panel, blend = 60 },
+		StatusLineNC = { fg = palette.gray850, bg = groups.panel, blend = 0.6 },
 		StatusLineTerm = { fg = palette.black, bg = palette.gray500 },
-		StatusLineTermNC = { fg = palette.black, bg = palette.gray500, blend = 60 },
+		StatusLineTermNC = { fg = palette.black, bg = palette.gray500, blend = 0.6 },
 		Substitute = { link = "IncSearch" },
 		TabLine = { fg = palette.gray500, bg = groups.panel },
 		TabLineFill = { bg = groups.panel },
 		TabLineSel = { fg = palette.gray50, bg = palette.gray750, bold = styles.bold },
 		Title = { fg = palette.gray200, bold = styles.bold },
 		VertSplit = { fg = groups.border },
-		Visual = { bg = palette.gray300, blend = 20 },
+		Visual = { bg = palette.gray300, blend = 0.2 },
 		-- VisualNOS = {},
 		WarningMsg = { fg = groups.warn, bold = styles.bold },
 		-- Whitespace = {},
 		WildMenu = { link = "IncSearch" },
 		WinBar = { fg = palette.gray500, bg = groups.panel },
-		WinBarNC = { fg = palette.gray850, bg = groups.panel, blend = 60 },
+		WinBarNC = { fg = palette.gray850, bg = groups.panel, blend = 0.6 },
 		WinSeparator = { fg = groups.border },
 
 		DiagnosticError = { fg = groups.error },
@@ -122,11 +122,11 @@ local function set_highlights()
 		DiagnosticUnderlineInfo = { sp = groups.info, undercurl = true },
 		DiagnosticUnderlineOk = { sp = groups.ok, undercurl = true },
 		DiagnosticUnderlineWarn = { sp = groups.warn, undercurl = true },
-		DiagnosticVirtualTextError = { fg = groups.error, bg = groups.error, blend = 10 },
-		DiagnosticVirtualTextHint = { fg = groups.hint, bg = groups.hint, blend = 10 },
-		DiagnosticVirtualTextInfo = { fg = groups.info, bg = groups.info, blend = 10 },
-		DiagnosticVirtualTextOk = { fg = groups.ok, bg = groups.ok, blend = 10 },
-		DiagnosticVirtualTextWarn = { fg = groups.warn, bg = groups.warn, blend = 10 },
+		DiagnosticVirtualTextError = { fg = groups.error, bg = groups.error, blend = 0.1 },
+		DiagnosticVirtualTextHint = { fg = groups.hint, bg = groups.hint, blend = 0.1 },
+		DiagnosticVirtualTextInfo = { fg = groups.info, bg = groups.info, blend = 0.1 },
+		DiagnosticVirtualTextOk = { fg = groups.ok, bg = groups.ok, blend = 0.1 },
+		DiagnosticVirtualTextWarn = { fg = groups.warn, bg = groups.warn, blend = 0.1 },
 
 		Boolean = { fg = palette.gray600, bold = styles.bold },
 		Character = { fg = palette.gray600, bold = styles.bold },
@@ -164,7 +164,7 @@ local function set_highlights()
 		String = { fg = palette.gray450 },
 		Structure = { fg = palette.white, bold = styles.bold },
 		Tag = { fg = palette.white },
-		Todo = { fg = palette.cyan500, bg = palette.cyan500, blend = 20, bold = styles.bold },
+		Todo = { fg = palette.cyan500, bg = palette.cyan500, blend = 0.2, bold = styles.bold },
 		Type = { fg = palette.gray50, bold = styles.bold },
 		TypeDef = { link = "Type" },
 		Underlined = { fg = palette.gray450, underline = true },
@@ -188,17 +188,17 @@ local function set_highlights()
 		htmlTagName = { fg = palette.gray200 },
 
 		markdownDelimiter = { fg = palette.gray500 },
-		markdownH1 = { fg = groups.h1, bold = styles.bold, blend = 10 },
+		markdownH1 = { fg = groups.h1, bold = styles.bold, blend = 0.1 },
 		markdownH1Delimiter = { link = "markdownH1" },
-		markdownH2 = { fg = groups.h2, bold = styles.bold, blend = 10 },
+		markdownH2 = { fg = groups.h2, bold = styles.bold, blend = 0.1 },
 		markdownH2Delimiter = { link = "markdownH2" },
-		markdownH3 = { fg = groups.h3, bold = styles.bold, blend = 10 },
+		markdownH3 = { fg = groups.h3, bold = styles.bold, blend = 0.1 },
 		markdownH3Delimiter = { link = "markdownH3" },
-		markdownH4 = { fg = groups.h4, bold = styles.bold, blend = 10 },
+		markdownH4 = { fg = groups.h4, bold = styles.bold, blend = 0.1 },
 		markdownH4Delimiter = { link = "markdownH4" },
-		markdownH5 = { fg = groups.h5, bold = styles.bold, blend = 10 },
+		markdownH5 = { fg = groups.h5, bold = styles.bold, blend = 0.1 },
 		markdownH5Delimiter = { link = "markdownH5" },
-		markdownH6 = { fg = groups.h6, bold = styles.bold, blend = 10 },
+		markdownH6 = { fg = groups.h6, bold = styles.bold, blend = 0.1 },
 		markdownH6Delimiter = { link = "markdownH6" },
 		markdownLinkText = { link = "markdownUrl" },
 		markdownUrl = { fg = groups.link, sp = groups.link, underline = true },
@@ -328,7 +328,7 @@ local function set_highlights()
 		["@markup.raw.delimiter.markdown"] = { fg = palette.gray500 },
 
 		["@markup.list"] = { fg = palette.gray500 },
-		["@markup.list.checked"] = { fg = palette.gray200, bg = palette.gray200, blend = 10 },
+		["@markup.list.checked"] = { fg = palette.gray200, bg = palette.gray200, blend = 0.1 },
 		["@markup.list.unchecked"] = { fg = palette.gray50 },
 
 		-- Markdown headings
@@ -345,9 +345,9 @@ local function set_highlights()
 		["@markup.heading.5.marker.markdown"] = { link = "markdownH5Delimiter" },
 		["@markup.heading.6.marker.markdown"] = { link = "markdownH6Delimiter" },
 
-		["@diff.plus"] = { fg = groups.git_add, bg = groups.git_add, blend = 20 },
-		["@diff.minus"] = { fg = groups.git_delete, bg = groups.git_delete, blend = 20 },
-		["@diff.delta"] = { bg = groups.git_change, blend = 20 },
+		["@diff.plus"] = { fg = groups.git_add, bg = groups.git_add, blend = 0.2 },
+		["@diff.minus"] = { fg = groups.git_delete, bg = groups.git_delete, blend = 0.2 },
+		["@diff.delta"] = { bg = groups.git_change, blend = 0.2 },
 
 		["@tag"] = { link = "Tag" },
 		["@tag.attribute"] = { fg = palette.gray300 },
@@ -593,8 +593,8 @@ local function set_highlights()
 		LspSignatureActiveParameter = { bg = palette.gray750 },
 
 		-- rlane/pounce.nvim
-		PounceAccept = { fg = palette.gray600, bg = palette.gray600, blend = 20 },
-		PounceAcceptBest = { fg = palette.gray400, bg = palette.gray400, blend = 20 },
+		PounceAccept = { fg = palette.gray600, bg = palette.gray600, blend = 0.2 },
+		PounceAcceptBest = { fg = palette.gray400, bg = palette.gray400, blend = 0.2 },
 		PounceGap = { link = "Search" },
 		PounceMatch = { link = "Search" },
 
@@ -605,9 +605,9 @@ local function set_highlights()
 
 		-- phaazon/hop.nvim
 		-- smoka7/hop.nvim
-		HopNextKey = { fg = palette.gray600, bg = palette.gray600, blend = 20 },
-		HopNextKey1 = { fg = palette.gray200, bg = palette.gray200, blend = 20 },
-		HopNextKey2 = { fg = palette.gray500, bg = palette.gray500, blend = 20 },
+		HopNextKey = { fg = palette.gray600, bg = palette.gray600, blend = 0.2 },
+		HopNextKey1 = { fg = palette.gray200, bg = palette.gray200, blend = 0.2 },
+		HopNextKey2 = { fg = palette.gray500, bg = palette.gray500, blend = 0.2 },
 		HopUnmatched = { fg = palette.gray850 },
 
 		-- nvim-telescope/telescope.nvim
@@ -748,10 +748,10 @@ local function set_highlights()
 		MiniDepsTitleSame = { link = "DiffText" },
 		MiniDepsTitleUpdate = { link = "DiffAdd" },
 
-		MiniDiffOverAdd = { fg = groups.git_add, bg = groups.git_add, blend = 20 },
-		MiniDiffOverChange = { fg = groups.git_change, bg = groups.git_change, blend = 20 },
+		MiniDiffOverAdd = { fg = groups.git_add, bg = groups.git_add, blend = 0.2 },
+		MiniDiffOverChange = { fg = groups.git_change, bg = groups.git_change, blend = 0.2 },
 		MiniDiffOverContext = { bg = palette.gray900 },
-		MiniDiffOverDelete = { fg = groups.git_delete, bg = groups.git_delete, blend = 20 },
+		MiniDiffOverDelete = { fg = groups.git_delete, bg = groups.git_delete, blend = 0.2 },
 		MiniDiffSignAdd = { fg = groups.git_add },
 		MiniDiffSignChange = { fg = groups.git_change },
 		MiniDiffSignDelete = { fg = groups.git_delete },
@@ -886,12 +886,12 @@ local function set_highlights()
 		RenderMarkdownCode = { bg = palette.gray750 },
 		RenderMarkdownCodeInline = { fg = palette.gray50, bg = palette.gray750 },
 		RenderMarkdownDash = { fg = palette.gray850 },
-		RenderMarkdownH1Bg = { bg = groups.h1, blend = 20 },
-		RenderMarkdownH2Bg = { bg = groups.h2, blend = 20 },
-		RenderMarkdownH3Bg = { bg = groups.h3, blend = 20 },
-		RenderMarkdownH4Bg = { bg = groups.h4, blend = 20 },
-		RenderMarkdownH5Bg = { bg = groups.h5, blend = 20 },
-		RenderMarkdownH6Bg = { bg = groups.h6, blend = 20 },
+		RenderMarkdownH1Bg = { bg = groups.h1, blend = 0.2 },
+		RenderMarkdownH2Bg = { bg = groups.h2, blend = 0.2 },
+		RenderMarkdownH3Bg = { bg = groups.h3, blend = 0.2 },
+		RenderMarkdownH4Bg = { bg = groups.h4, blend = 0.2 },
+		RenderMarkdownH5Bg = { bg = groups.h5, blend = 0.2 },
+		RenderMarkdownH6Bg = { bg = groups.h6, blend = 0.2 },
 		RenderMarkdownQuote = { fg = palette.gray500 },
 		RenderMarkdownTableFill = { link = "Conceal" },
 		RenderMarkdownTableHead = { fg = palette.gray500 },
@@ -925,8 +925,8 @@ local function set_highlights()
 		AvanteReversedThirdTitle = { fg = palette.gray300 },
 		AvanteConflictCurrent = { fg = palette.black, bg = palette.orange },
 		AvanteConflictIncoming = { fg = palette.black, bg = palette.green },
-		AvanteConflictCurrentLabel = { fg = palette.gray900, bg = palette.orange, blend = 80 },
-		AvanteConflictIncomingLabel = { fg = palette.gray900, bg = palette.green, blend = 80 },
+		AvanteConflictCurrentLabel = { fg = palette.gray900, bg = palette.orange, blend = 0.8 },
+		AvanteConflictIncomingLabel = { fg = palette.gray900, bg = palette.green, blend = 0.8 },
 
 		-- Saghen/blink.cmp
 		BlinkCmpDoc = { fg = palette.gray50 },
@@ -1054,13 +1054,13 @@ local function set_highlights()
 			local parsed = vim.tbl_extend("force", {}, highlight)
 
 			if highlight.fg ~= nil then
-				parsed.fg = colors.parse_color(highlight.fg) or highlight.fg
+				parsed.fg = util.parse_color(highlight.fg) or highlight.fg
 			end
 			if highlight.bg ~= nil then
-				parsed.bg = colors.parse_color(highlight.bg) or highlight.bg
+				parsed.bg = util.parse_color(highlight.bg) or highlight.bg
 			end
 			if highlight.sp ~= nil then
-				parsed.sp = colors.parse_color(highlight.sp) or highlight.sp
+				parsed.sp = util.parse_color(highlight.sp) or highlight.sp
 			end
 
 			if (highlight.inherit == nil or highlight.inherit) and existing ~= nil then
@@ -1078,8 +1078,8 @@ local function set_highlights()
 			config.options.before_highlight(group, highlight, palette)
 		end
 
-		if highlight.blend ~= nil and (highlight.blend >= 0 and highlight.blend <= 100) and highlight.bg ~= nil then
-			highlight.bg = colors.blend(highlight.bg, highlight.blend_on or palette.black, highlight.blend / 100)
+		if highlight.blend ~= nil and (highlight.blend >= 0 and highlight.blend <= 1) and highlight.bg ~= nil then
+			highlight.bg = util.blend_bg(highlight.bg, highlight.blend / 100)
 		end
 
 		highlight.blend = nil
