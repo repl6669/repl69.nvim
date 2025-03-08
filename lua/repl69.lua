@@ -622,13 +622,19 @@ local function set_highlights()
 
 		-- ibhagwan/fzf-lua
 		FzfLuaBorder = make_border(),
+		FzfLuaCursor = { link = "IncSearch" },
+		FzfLuaDirPart = { fg = palette.gray700 },
+		FzfLuaFilePart = { fg = palette.gray450 },
+		FzfLuaFzfCursorLine = { link = "Visual" },
+		FzfLuaFzfNormal = { fg = palette.gray100 },
+		FzfLuaFzfPointer = { fg = palette.orange500 },
+		FzfLuaHeaderBind = { link = "@punctuation.special" },
+		FzfLuaHeaderText = { link = "Title" },
 		FzfLuaBufFlagAlt = { fg = palette.gray500 },
 		FzfLuaBufFlagCur = { fg = palette.gray500 },
-		FzfLuaCursorLine = { fg = palette.gray50, bg = palette.gray900 },
-		FzfLuaFilePart = { fg = palette.gray450 },
-		FzfLuaHeaderBind = { fg = palette.gray100 },
-		FzfLuaHeaderText = { fg = palette.gray600 },
+		FzfLuaPath = { link = "Directory" },
 		FzfLuaNormal = { link = "NormalFloat" },
+		FzfLuaPreviewTitle = { fg = palette.fg, bg = groups.panel },
 		FzfLuaTitle = { link = "FloatTitle" },
 
 		-- rcarriga/nvim-notify
@@ -1079,7 +1085,7 @@ local function set_highlights()
 		end
 
 		if highlight.blend ~= nil and (highlight.blend >= 0 and highlight.blend <= 1) and highlight.bg ~= nil then
-			highlight.bg = util.blend_bg(highlight.bg, highlight.blend / 100)
+			highlight.bg = util.blend_bg(highlight.bg, highlight.blend)
 		end
 
 		highlight.blend = nil
