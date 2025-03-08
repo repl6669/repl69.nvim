@@ -31,7 +31,7 @@ M.options = {
 	---@type table<string, string | PaletteColor>
 	groups = {
 		base = "black",
-		ink = "gray300",
+		link = "gray300",
 		border = "gray900",
 		panel = "gray950",
 
@@ -44,7 +44,7 @@ M.options = {
 		todo = "cyan700",
 
 		git_add = "green700",
-		git_change = "yellow700",
+		git_change = "blue700",
 		git_delete = "red700",
 		git_dirty = "gray300",
 		git_ignore = "gray600",
