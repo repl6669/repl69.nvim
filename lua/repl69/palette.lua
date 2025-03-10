@@ -48,32 +48,32 @@ local colors = {
 	blue700 = hsl(240, 90, 25), -- #050561
 	blue900 = hsl(240, 90, 15), -- #040449
 
-	pink = hsl(320, 80, 40), -- #C80084
-	pink100 = hsl(320, 80, 70), -- #FF6CCA
-	pink300 = hsl(320, 80, 55), -- #FD00AE
-	pink500 = hsl(320, 80, 45), -- #E10095
-	pink700 = hsl(320, 80, 35), -- #AF0074
-	pink900 = hsl(320, 80, 25), -- #7D0052
+	pink = hsl(320, 80, 40), -- #c80084
+	pink100 = hsl(320, 80, 70), -- #ff6cca
+	pink300 = hsl(320, 80, 55), -- #fd00ae
+	pink500 = hsl(320, 80, 45), -- #e10095
+	pink700 = hsl(320, 80, 35), -- #af0074
+	pink900 = hsl(320, 80, 25), -- #7d0052
 
-	purple = hsl(265, 90, 40), -- #5F00C9
-	purple100 = hsl(265, 90, 70), -- #B16AFF
-	purple300 = hsl(265, 90, 55), -- #861AFD
-	purple500 = hsl(265, 90, 45), -- #6B00E3
-	purple700 = hsl(265, 90, 35), -- #5300B0
-	purple900 = hsl(265, 90, 25), -- #3C017E
+	purple = hsl(265, 90, 40), -- #5f00c9
+	purple100 = hsl(265, 90, 70), -- #b16aff
+	purple300 = hsl(265, 90, 55), -- #861afd
+	purple500 = hsl(265, 90, 45), -- #6b00e3
+	purple700 = hsl(265, 90, 35), -- #5300b0
+	purple900 = hsl(265, 90, 25), -- #3c017e
 
 	orange = hsl(25, 100, 40), -- #dc4a00
 	orange100 = hsl(25, 100, 70), -- #ffa056
 	orange300 = hsl(25, 100, 50), -- #ff5c00
 	orange500 = hsl(25, 100, 35), -- #c04100
-	orange700 = hsl(25, 100, 20), -- #6f2500
+	orange700 = hsl(25, 100, 25), -- #892f00
 	orange900 = hsl(25, 100, 15), -- #531b00
 
 	red = hsl(0, 100, 60), -- #ff001e
 	red100 = hsl(0, 100, 70), -- #ff565e
 	red300 = hsl(0, 100, 50), -- ##f00000
 	red500 = hsl(0, 100, 35), -- #c30000
-	red700 = hsl(0, 100, 20), -- #700000
+	red700 = hsl(0, 100, 25), -- #8b0000
 	red900 = hsl(0, 100, 15), -- #540000
 
 	yellow = hsl(60, 100, 75), -- #feff67
