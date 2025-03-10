@@ -4,6 +4,8 @@ local hsl = require("repl69.util").hslToHex
 ---@type table<string, string>
 local colors = {
 	black = hsl(0, 0, 0), -- #000000
+	white = hsl(0, 0, 88), -- #e0e0e0
+
 	gray25 = hsl(0, 0, 84), -- #d6d6d6
 	gray50 = hsl(0, 0, 80), -- #cccccc
 	gray100 = hsl(0, 0, 76), -- #c2c2c2
@@ -25,7 +27,6 @@ local colors = {
 	gray900 = hsl(0, 0, 12), -- #1f1f1f
 	gray925 = hsl(0, 0, 8), -- #141414
 	gray950 = hsl(0, 0, 4), -- #0a0a0a
-	white = hsl(0, 0, 88), -- #e0e0e0
 
 	cyan = hsl(180, 90, 24), -- #067474
 	cyan100 = hsl(180, 90, 70), -- #00fbf9

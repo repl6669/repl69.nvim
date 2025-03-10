@@ -25,7 +25,7 @@ local function set_highlights()
 	local default_highlights = {
 		ColorColumn = { bg = palette.gray925 },
 		Conceal = { bg = palette.none },
-		CurSearch = { fg = palette.black, bg = palette.green, blend = 0.6 },
+		CurSearch = { fg = palette.black, bg = palette.green300, blend = 0.6 },
 		Cursor = { fg = palette.gray50, bg = palette.gray700 },
 		CursorColumn = { bg = palette.gray925 },
 		-- CursorIM = {},
@@ -139,7 +139,7 @@ local function set_highlights()
 		Error = { fg = palette.red, bold = styles.bold },
 		Exception = { fg = palette.white },
 		Float = { fg = palette.gray600, bold = styles.bold },
-		Function = { fg = palette.white, bold = styles.bold },
+		Function = { fg = palette.gray50, bold = styles.bold },
 		Identifier = { fg = palette.white, bold = styles.bold },
 		Include = { fg = palette.white, bold = styles.bold },
 		Keyword = { fg = palette.gray50, bold = styles.bold },
@@ -218,11 +218,11 @@ local function set_highlights()
 
 		--- Treesitter
 		--- |:help treesitter-highlight-groups|
-		["@variable"] = { fg = palette.gray50, italic = styles.italic },
-		["@variable.builtin"] = { fg = palette.gray600, italic = styles.italic, bold = styles.bold },
-		["@variable.parameter"] = { fg = palette.gray300, italic = styles.italic },
-		["@variable.parameter.builtin"] = { fg = palette.gray300, italic = styles.italic, bold = styles.bold },
-		["@variable.member"] = { fg = palette.gray200 },
+		["@variable"] = { fg = palette.white, italic = styles.italic },
+		["@variable.builtin"] = { fg = palette.gray100, italic = styles.italic, bold = styles.bold },
+		["@variable.parameter"] = { fg = palette.white, italic = styles.italic },
+		["@variable.parameter.builtin"] = { fg = palette.gray100, italic = styles.italic, bold = styles.bold },
+		["@variable.member"] = { fg = palette.gray100 },
 
 		["@constant"] = { fg = palette.gray400 },
 		["@constant.builtin"] = { fg = palette.gray400, bold = styles.bold },
@@ -257,12 +257,12 @@ local function set_highlights()
 		["@attribute.builtin"] = { fg = palette.gray300, bold = styles.bold },
 		["@property"] = { fg = palette.gray200, italic = styles.italic },
 
-		["@function"] = { fg = palette.gray100 },
-		["@function.builtin"] = { fg = palette.gray100, bold = styles.bold },
+		["@function"] = { link = "Function" },
+		["@function.builtin"] = { fg = palette.gray200, bold = styles.bold },
 		-- ["@function.call"] = {},
 		["@function.macro"] = { link = "Function" },
-		["@function.method"] = { fg = palette.gray100 },
-		["@function.method.call"] = { fg = palette.gray300 },
+		["@function.method"] = { link = "Function" },
+		["@function.method.call"] = { link = "Function" },
 		["@function.method.php"] = { link = "Function" },
 		["@function.method.call.php"] = { link = "Function" },
 
@@ -273,8 +273,9 @@ local function set_highlights()
 		["@operator"] = { link = "Operator" },
 
 		["@keyword"] = { link = "Keyword" },
+		["@keyword.modifier"] = { fg = palette.gray300 },
+		["@keyword.function"] = { fg = palette.gray200 },
 		-- ["@keyword.coroutine"] = {},
-		-- ["@keyword.function"] = {},
 		["@keyword.operator"] = { fg = palette.gray200 },
 		["@keyword.import"] = { fg = palette.gray200 },
 		["@keyword.storage"] = { fg = palette.gray200 },
@@ -291,7 +292,7 @@ local function set_highlights()
 
 		--- Punctuation
 		["@punctuation.delimiter"] = { fg = palette.gray500 },
-		["@punctuation.bracket"] = { fg = palette.gray500 },
+		["@punctuation.bracket"] = { fg = palette.gray300 },
 		["@punctuation.special"] = { fg = palette.gray500 },
 
 		--- Comments
