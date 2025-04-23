@@ -940,16 +940,25 @@ local function set_highlights()
 		GrugFarResultsStats = { fg = palette.gray300 },
 
 		-- yetone/avante.nvim
+		-- https://github.com/yetone/avante.nvim/blob/main/lua/avante/highlights.lua
 		AvanteTitle = { fg = palette.gray700, bg = palette.gray100 },
 		AvanteReversedTitle = { fg = palette.gray100 },
 		AvanteSubtitle = { fg = palette.gray800, bg = palette.gray200 },
-		AvanteReversedSubtitle = { fg = palette.gray200 },
+		AvanteReverseSubtitle = { fg = palette.gray200 },
 		AvanteThirdTitle = { fg = palette.gray800, bg = palette.gray300 },
 		AvanteReversedThirdTitle = { fg = palette.gray300 },
-		AvanteConflictCurrent = { fg = palette.black, bg = palette.orange },
-		AvanteConflictIncoming = { fg = palette.black, bg = palette.green },
+		AvanteConfirmTitle = { fg = palette.black, bg = palette.red100 },
+		AvanteButtonDefault = { fg = palette.black, bg = palette.gray400 },
+		AvanteButtonHover = { fg = palette.black, bg = palette.green100 },
+		AvanteButtonPrimary = { fg = palette.black, bg = palette.gray400 },
+		AvanteButtonPrimaryHover = { fg = palette.black, bg = palette.blue100 },
+		AvanteButtonDanger = { fg = palette.black, bg = palette.gray400 },
+		AvanteButtonDangerHover = { fg = palette.black, bg = palette.red100 },
+		AvanteConflictCurrent = { fg = palette.black, bg = palette.red100 },
+		AvanteConflictIncoming = { fg = palette.black, bg = palette.green100 },
 		AvanteConflictCurrentLabel = { fg = palette.gray900, bg = palette.orange, blend = 0.8 },
 		AvanteConflictIncomingLabel = { fg = palette.gray900, bg = palette.green, blend = 0.8 },
+		AvanteSidebarWinSeparator = { link = "FloatBorder" },
 
 		-- Saghen/blink.cmp
 		BlinkCmpDoc = { link = "NormalFloat" },
@@ -1021,7 +1030,7 @@ local function set_highlights()
 		FloatBorder = { fg = palette.gray850, bg = "NONE" },
 		FloatTitle = { fg = palette.gray200, bg = "NONE", bold = styles.bold },
 		Folded = { fg = palette.gray50, bg = "NONE" },
-		NormalFloat = { bg = "NONE" },
+		NormalFloat = { fg = palette.gray200, bg = "NONE" },
 		Normal = { fg = palette.gray100, bg = "NONE" },
 		NormalNC = { fg = palette.gray50, bg = "NONE" },
 		Pmenu = { fg = palette.gray500, bg = "NONE" },
