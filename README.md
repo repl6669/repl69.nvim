@@ -57,5 +57,4 @@ vim.cmd("colorscheme repl69")
 
 ## Credits
 
-- Heavily based on [rose-pine](https://github.com/rose-pine/neovim) neovim theme.
 - Inspired by [presto.vim](https://github.com/ewilazarus/preto/blob/master/colors/preto.vim).

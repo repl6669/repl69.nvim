@@ -1,40 +1,40 @@
-local palette = require("repl69.palette")
-local config = require("repl69.config")
+local colors = require("repl69.colors").setup()
+local config = require("repl69.config").extend()
 
-local bg_base = palette.black
-if config.options.styles.transparency then
+local bg_base = colors.black
+if config.transparent then
 	bg_base = "NONE"
 end
 
 return {
 	normal = {
-		a = { bg = palette.gray100, fg = palette.black, gui = "bold" },
-		b = { bg = palette.gray750, fg = palette.gray250 },
-		c = { bg = bg_base, fg = palette.gray50 },
+		a = { bg = colors.gray100, fg = colors.black, gui = "bold" },
+		b = { bg = colors.gray750, fg = colors.gray250 },
+		c = { bg = bg_base, fg = colors.gray50 },
 	},
 	insert = {
-		a = { bg = palette.green, fg = palette.black, gui = "bold" },
-		b = { bg = palette.gray750, fg = palette.gray250 },
-		c = { bg = bg_base, fg = palette.gray50 },
+		a = { bg = colors.green, fg = colors.black, gui = "bold" },
+		b = { bg = colors.gray750, fg = colors.gray250 },
+		c = { bg = bg_base, fg = colors.gray50 },
 	},
 	visual = {
-		a = { bg = palette.cyan, fg = palette.black, gui = "bold" },
-		b = { bg = palette.gray750, fg = palette.gray250 },
-		c = { bg = bg_base, fg = palette.gray50 },
+		a = { bg = colors.cyan, fg = colors.black, gui = "bold" },
+		b = { bg = colors.gray750, fg = colors.gray250 },
+		c = { bg = bg_base, fg = colors.gray50 },
 	},
 	replace = {
-		a = { bg = palette.blue, fg = palette.black, gui = "bold" },
-		b = { bg = palette.gray750, fg = palette.gray250 },
-		c = { bg = bg_base, fg = palette.gray50 },
+		a = { bg = colors.blue, fg = colors.black, gui = "bold" },
+		b = { bg = colors.gray750, fg = colors.gray250 },
+		c = { bg = bg_base, fg = colors.gray50 },
 	},
 	command = {
-		a = { bg = palette.orange, fg = palette.black, gui = "bold" },
-		b = { bg = palette.gray750, fg = palette.gray250 },
-		c = { bg = bg_base, fg = palette.gray50 },
+		a = { bg = colors.orange, fg = colors.black, gui = "bold" },
+		b = { bg = colors.gray750, fg = colors.gray250 },
+		c = { bg = bg_base, fg = colors.gray50 },
 	},
 	inactive = {
-		a = { bg = bg_base, fg = palette.gray850, gui = "bold" },
-		b = { bg = bg_base, fg = palette.gray850 },
-		c = { bg = bg_base, fg = palette.gray850 },
+		a = { bg = bg_base, fg = colors.gray850, gui = "bold" },
+		b = { bg = bg_base, fg = colors.gray850 },
+		c = { bg = bg_base, fg = colors.gray850 },
 	},
 }
