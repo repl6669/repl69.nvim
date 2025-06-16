@@ -93,3 +93,4 @@
 ---@alias repl69.Highlights table<string, vim.api.keyset.highlight>
 
 ---@alias ColorScheme Palette
+

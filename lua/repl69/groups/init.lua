@@ -25,6 +25,7 @@ M.plugins = {
   ["indentmini.nvim"] = "indentmini",
   ["lazy.nvim"] = "lazy",
   ["lspsaga.nvim"] = "lspsaga",
+  ["mason.nvim"] = "mason",
   ["mini.cursorword"] = "mini_cursorword",
   ["mini.indentscope"] = "mini_indentscope",
   ["mini.pick"] = "mini_pick",

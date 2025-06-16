@@ -26,6 +26,23 @@ function M.setup(opts)
     M.terminal(colors)
   end
 
+  -- Ensure Mason highlights are applied after other plugins that might override them
+  vim.api.nvim_create_autocmd('ColorScheme', {
+    pattern = 'repl69*',
+    callback = function()
+      -- Small delay to ensure other plugins have finished setting their highlights
+      vim.defer_fn(function()
+        if groups.mason then
+          local mason_highlights = require('repl69.groups.mason').get(colors, opts)
+          for name, hl in pairs(mason_highlights) do
+            vim.api.nvim_set_hl(0, name, hl)
+          end
+        end
+      end, 10)
+    end,
+    desc = 'Ensure Mason highlights from repl69 theme are applied'
+  })
+
   return colors, groups, opts
 end
 
