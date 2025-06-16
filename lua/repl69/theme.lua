@@ -7,7 +7,7 @@ function M.setup(opts)
   opts = require("repl69.config").extend(opts)
 
   local colors = require("repl69.colors").setup(opts)
-  local groups = require("repl69.groups").setup(colors, opts)
+  local groups, groups_status = require("repl69.groups").setup(colors, opts)
 
   -- only needed to clear when not the default colorscheme
   if vim.g.colors_name then
@@ -25,23 +25,6 @@ function M.setup(opts)
   if opts.terminal_colors then
     M.terminal(colors)
   end
-
-  -- Ensure Mason highlights are applied after other plugins that might override them
-  vim.api.nvim_create_autocmd('ColorScheme', {
-    pattern = 'repl69*',
-    callback = function()
-      -- Small delay to ensure other plugins have finished setting their highlights
-      vim.defer_fn(function()
-        if groups.mason then
-          local mason_highlights = require('repl69.groups.mason').get(colors, opts)
-          for name, hl in pairs(mason_highlights) do
-            vim.api.nvim_set_hl(0, name, hl)
-          end
-        end
-      end, 10)
-    end,
-    desc = 'Ensure Mason highlights from repl69 theme are applied'
-  })
 
   return colors, groups, opts
 end
