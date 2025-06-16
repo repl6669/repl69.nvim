@@ -3,7 +3,6 @@ local Util = require("repl69.util")
 
 local M = {}
 
--- stylua: ignore
 M.plugins = {
   ["aerial.nvim"]                   = "aerial",
   ["ale"]                           = "ale",
@@ -71,6 +70,11 @@ M.plugins = {
   ["vim-sneak"]                     = "sneak",
   ["which-key.nvim"]                = "which-key",
   ["yanky.nvim"]                    = "yanky",
+  ["html"]                          = "html",
+  ["markdown"]                      = "markdown",
+  ["health"]                        = "health",
+  ["lsp"]                           = "lsp",
+  ["git"]                           = "git",
 }
 
 ---@param colors ColorScheme
@@ -79,6 +83,11 @@ M.plugins = {
 function M.setup(colors, opts)
   local groups = {
     base = true,
+    html = true,
+    markdown = true,
+    health = true,
+    lsp = true,
+    git = true,
     gitsigns = true,
     gitgutter = true,
   }
