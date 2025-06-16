@@ -66,24 +66,25 @@ function M.setup(opts)
   colors.hint = colors.green700
   colors.todo = colors.cyan700
 
-  -- Terminal colors
+  -- stylua: ignore
+  --- @class TerminalColors
   colors.terminal = {
-    black = colors.gray750,
-    black_bright = colors.gray700,
-    red = colors.gray650,
-    red_bright = colors.gray600,
-    green = colors.gray550,
-    green_bright = colors.gray500,
-    yellow = colors.gray450,
-    yellow_bright = colors.gray400,
-    blue = colors.gray250,
-    blue_bright = colors.gray200,
-    magenta = colors.gray350,
-    magenta_bright = colors.gray300,
-    cyan = colors.gray100,
-    cyan_bright = colors.gray50,
-    white = colors.gray25,
-    white_bright = colors.white,
+    black =             colors.gray750,
+    black_bright =      colors.gray700,
+    red =               colors.gray650,
+    red_bright =        colors.gray600,
+    green =             colors.gray550,
+    green_bright =      colors.gray500,
+    yellow =            colors.gray450,
+    yellow_bright =     colors.gray400,
+    blue =              colors.gray250,
+    blue_bright =       colors.gray200,
+    magenta =           colors.gray350,
+    magenta_bright =    colors.gray300,
+    cyan =              colors.gray100,
+    cyan_bright =       colors.gray50,
+    white =             colors.gray25,
+    white_bright =      colors.white,
   }
 
   if opts.on_colors then

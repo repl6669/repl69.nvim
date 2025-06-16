@@ -1,6 +1,6 @@
 local hsl = require("repl69.util").hslToHex
 
----@type Palette
+---@class Palette
 local ret = {
   bg = hsl(0, 0, 0), -- #000000 (black)
   bg_dark = hsl(0, 0, 4), -- #0a0a0a (gray950)
