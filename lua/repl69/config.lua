@@ -1,6 +1,6 @@
 local M = {}
 
-M.version = "2.0.0" -- Updated to match tokyonight structure
+M.version = "2.0.0"
 
 ---@class repl69.Config
 ---@field on_colors fun(colors: ColorScheme)
@@ -68,9 +68,10 @@ end
 setmetatable(M, {
   __index = function(_, k)
     if k == "options" then
-      return rawget(M, "options") or M.defaults
+      return M.defaults
     end
   end,
 })
 
 return M
+

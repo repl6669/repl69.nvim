@@ -21,7 +21,6 @@ function M.get(c, opts)
     CmpItemMenu            = { fg = c.comment, bg = c.none },
   }
 
-  -- Add LSP kind highlights using the same pattern as tokyonight
   local kinds = {
     Array = "@punctuation.bracket",
     Boolean = "@boolean",
@@ -67,3 +66,4 @@ function M.get(c, opts)
 end
 
 return M
+

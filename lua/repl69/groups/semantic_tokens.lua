@@ -2,7 +2,8 @@ local Util = require("repl69.util")
 
 local M = {}
 
----@type repl69.HighlightsFn
+ M.url = "https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/#semanticTokens"
+ 
 function M.get(c, opts)
   local styles = opts.styles
 

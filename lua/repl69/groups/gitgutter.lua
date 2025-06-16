@@ -1,23 +1,19 @@
 local M = {}
 
+M.url = "https://github.com/airblade/vim-gitgutter"
+
 ---@type repl69.HighlightsFn
 function M.get(c, opts)
   -- stylua: ignore
   return {
-    -- airblade/vim-gitgutter
-    GitGutterAdd                = { fg = c.git.add, bg = "NONE" },
-    GitGutterChange             = { fg = c.git.change, bg = "NONE" },
-    GitGutterDelete             = { fg = c.git.delete, bg = "NONE" },
-    GitGutterChangeDelete       = { fg = c.git.change, bg = "NONE" },
-    GitGutterAddLine            = { bg = c.diff.add },
-    GitGutterChangeLine         = { bg = c.diff.change },
-    GitGutterDeleteLine         = { bg = c.diff.delete },
-    GitGutterChangeDeleteLine   = { bg = c.diff.change },
-    GitGutterAddLineNr          = { fg = c.git.add, bg = "NONE" },
-    GitGutterChangeLineNr       = { fg = c.git.change, bg = "NONE" },
-    GitGutterDeleteLineNr       = { fg = c.git.delete, bg = "NONE" },
-    GitGutterChangeDeleteLineNr = { fg = c.git.change, bg = "NONE" },
+    GitGutterAdd          = { fg = c.git.add }, -- diff mode: Added line |diff.txt|
+    GitGutterChange       = { fg = c.git.change }, -- diff mode: Changed line |diff.txt|
+    GitGutterDelete       = { fg = c.git.delete }, -- diff mode: Deleted line |diff.txt|
+    GitGutterAddLineNr    = { fg = c.git.add },
+    GitGutterChangeLineNr = { fg = c.git.change },
+    GitGutterDeleteLineNr = { fg = c.git.delete },
   }
 end
 
 return M
+
