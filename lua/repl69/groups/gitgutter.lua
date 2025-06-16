@@ -1,3 +1,5 @@
+local Util = require("repl69.util")
+
 local M = {}
 
 M.url = "https://github.com/airblade/vim-gitgutter"
@@ -6,14 +8,13 @@ M.url = "https://github.com/airblade/vim-gitgutter"
 function M.get(c, opts)
   -- stylua: ignore
   return {
-    GitGutterAdd          = { fg = c.git.add }, -- diff mode: Added line |diff.txt|
-    GitGutterChange       = { fg = c.git.change }, -- diff mode: Changed line |diff.txt|
-    GitGutterDelete       = { fg = c.git.delete }, -- diff mode: Deleted line |diff.txt|
-    GitGutterAddLineNr    = { fg = c.git.add },
-    GitGutterChangeLineNr = { fg = c.git.change },
-    GitGutterDeleteLineNr = { fg = c.git.delete },
+    GitGutterAdd          = { fg = Util.blend_bg(c.git.add, 0.60) }, 
+    GitGutterChange       = { fg = Util.blend_bg(c.git.change, 0.60) }, 
+    GitGutterDelete       = { fg = Util.blend_bg(c.git.delete, 0.60) }, 
+    GitGutterAddLineNr    = { fg = Util.blend_bg(c.git.add, 0.60) },
+    GitGutterChangeLineNr = { fg = Util.blend_bg(c.git.change, 0.60) },
+    GitGutterDeleteLineNr = { fg = Util.blend_bg(c.git.delete, 0.60) },
   }
 end
 
 return M
-

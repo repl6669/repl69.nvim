@@ -1,3 +1,5 @@
+local Util = require("repl69.util")
+
 local M = {}
 
 M.url = "https://github.com/lewis6991/gitsigns.nvim"
@@ -6,11 +8,10 @@ M.url = "https://github.com/lewis6991/gitsigns.nvim"
 function M.get(c, opts)
   -- stylua: ignore
   return {
-    GitSignsAdd    = { fg = c.git.add }, -- diff mode: Added line |diff.txt|
-    GitSignsChange = { fg = c.git.change }, -- diff mode: Changed line |diff.txt|
-    GitSignsDelete = { fg = c.git.delete }, -- diff mode: Deleted line |diff.txt|
+    GitSignsAdd    = { fg = Util.blend_bg(c.git.add, 0.60) },
+    GitSignsChange = { fg = Util.blend_bg(c.git.change, 0.60) },
+    GitSignsDelete = { fg = Util.blend_bg(c.git.delete, 0.60) },
   }
 end
 
 return M
-

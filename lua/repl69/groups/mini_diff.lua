@@ -1,3 +1,5 @@
+local Util = require("repl69.util")
+
 local M = {}
 
 M.url = "https://github.com/echasnovski/mini.diff"
@@ -10,10 +12,11 @@ function M.get(c, opts)
     MiniDiffOverChange  = "DiffText",
     MiniDiffOverContext = "DiffChange",
     MiniDiffOverDelete  = "DiffDelete",
-    MiniDiffSignAdd     = { fg = c.git.add },
-    MiniDiffSignChange  = { fg = c.git.change },
-    MiniDiffSignDelete  = { fg = c.git.delete },
+    MiniDiffSignAdd     = { fg = Util.blend_bg(c.git.add, 0.60) },
+    MiniDiffSignChange  = { fg = Util.blend_bg(c.git.change, 0.60) },
+    MiniDiffSignDelete  = { fg = Util.blend_bg(c.git.delete, 0.60) },
   }
 end
 
 return M
+
