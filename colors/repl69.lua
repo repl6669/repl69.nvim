@@ -5,7 +5,8 @@ if not config.options then
   package.loaded["repl69.config"] = nil
   package.loaded["repl69.colors"] = nil
   package.loaded["repl69.colors.init"] = nil
-  package.loaded["repl69.colors.darkness"] = nil
+  package.loaded["repl69.colors.void"] = nil
+  package.loaded["repl69.colors.dawn"] = nil
   package.loaded["repl69.groups"] = nil
   package.loaded["repl69.groups.init"] = nil
   package.loaded["repl69.groups.base"] = nil

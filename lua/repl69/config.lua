@@ -6,8 +6,8 @@ M.version = "2.0.0" -- Updated to match tokyonight structure
 ---@field on_colors fun(colors: ColorScheme)
 ---@field on_highlights fun(highlights: repl69.Highlights, colors: ColorScheme)
 M.defaults = {
-  style = "darkness", -- The theme comes in one style: darkness (our version of tokyonight's "night")
-  light_style = "darkness", -- repl69 doesn't have a light variant
+  style = "void", -- The theme comes in one style: void (our version of tokyonight's "night")
+  light_style = "dawn", -- repl69 light variant
   transparent = false, -- Enable this to disable setting the background color
   terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
   styles = {
