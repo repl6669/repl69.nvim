@@ -1,16 +1,20 @@
 local Config = require("repl69.config")
 local Util = require("repl69.util")
 
-local M = {}
 M.plugins = {
+  ["aerial.nvim"]                   = "aerial",
+  ["ale"]                           = "ale",
   ["aerial.nvim"]                   = "aerial",
   ["ale"]                           = "ale",
   ["alpha-nvim"]                    = "alpha",
   ["alpha-nvim"]                    = "alpha",
   ["barbar.nvim"]                   = "barbar",
   ["blink.cmp"]                     = "blink",
+  ["barbar.nvim"]                   = "barbar",
+  ["blink.cmp"]                     = "blink",
   ["bufferline.nvim"]               = "bufferline",
   ["codeium.nvim"]                  = "codeium",
+  ["copilot.lua"]                   = "copilot",
   ["copilot.lua"]                   = "copilot",
   ["dashboard-nvim"]                = "dashboard",
   ["flash.nvim"]                    = "flash",
