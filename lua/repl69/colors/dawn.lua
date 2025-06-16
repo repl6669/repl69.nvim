@@ -6,7 +6,7 @@ local ret = {
   bg_dark = hsl(0, 0, 95), -- #f2f2f2 (light gray)
   bg_dark1 = hsl(0, 0, 92), -- #ebebeb (slightly darker)
   bg_highlight = hsl(0, 0, 90), -- #e6e6e6 (highlight background)
-  
+
   -- Core grays - inverted for light theme
   black = hsl(0, 0, 12), -- #1f1f1f (dark text)
   white = hsl(0, 0, 100), -- #ffffff (pure white)
@@ -103,8 +103,10 @@ local ret = {
     rename = hsl(0, 0, 52), -- #858585 (gray400)
     stage = hsl(0, 0, 44), -- #707070 (gray300)
     text = hsl(0, 0, 28), -- #474747 (gray100)
+    ignore = hsl(0, 0, 24), -- #3d3d3d (gray50)
     untracked = hsl(35, 95, 35), -- #c47000 (darker orange for light bg)
   },
 }
 
 return ret
+

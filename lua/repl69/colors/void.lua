@@ -98,6 +98,7 @@ local ret = {
     add = hsl(158, 90, 30), -- #0ba46b (approx 300 variant)
     change = hsl(32, 100, 50), -- #ff9800 (orange300)
     delete = hsl(0, 100, 40), -- #cc0019 (approx 300 variant)
+    ignore = hsl(0, 0, 32), -- #515151 (gray600)
     dirty = hsl(0, 0, 60), -- #999999 (gray300)
     merge = hsl(0, 0, 68), -- #adadad (gray200)
     rename = hsl(0, 0, 52), -- #858585 (gray400)
