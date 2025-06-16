@@ -60,9 +60,9 @@ function M.get(c, opts)
     SnacksPickerPickWin   = { fg = c.fg, bg = c.bg_search, bold = true },
   }
 
-  local rainbow_colors = { c.red, c.orange, c.yellow, c.green, c.cyan, c.blue, c.purple, c.pink }
-  for i, color in ipairs(rainbow_colors) do
-    ret["SnacksIndent" .. i] = { fg = color, nocombine = true }
+  -- Use consistent gray colors for all indent levels instead of rainbow
+  for i = 1, 8 do
+    ret["SnacksIndent" .. i] = { fg = c.gray850, nocombine = true }
   end
   return ret
 end
