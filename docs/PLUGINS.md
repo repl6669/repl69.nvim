@@ -1,13 +1,12 @@
-# Repl69 Plugin Reference
 
 Complete reference of all supported plugins with their highlight groups and configuration options.
 
 ## 📊 Overview
 
-- **Total Plugins Supported**: 50+
+- **Total Plugins Supported**: 69+
 - **Plugin Categories**: 8
-- **Highlight Groups**: 1,900+
-- **Mini.nvim Plugins**: 13/21 supported
+- **Highlight Groups**: 2,500+
+- **Mini.nvim Plugins**: 16/21 supported
 
 ## 🔍 Search & Navigation
 
@@ -79,6 +78,32 @@ Complete reference of all supported plugins with their highlight groups and conf
 
 **Key Highlights**:
 - `BlinkCmpMenu` - Completion menu
+- `BlinkCmpKind*` - Completion item kinds
+- `BlinkCmpLabel` - Completion labels
+
+### codeium.nvim
+**Repository**: [Exafunction/codeium.nvim](https://github.com/Exafunction/codeium.nvim)
+**Config Key**: `codeium`
+
+**Key Highlights**:
+- `CodeiumSuggestion` - AI code suggestions
+- `CodeiumAnnotation` - Completion annotations
+
+### supermaven-nvim
+**Repository**: [supermaven-inc/supermaven-nvim](https://github.com/supermaven-inc/supermaven-nvim)
+**Config Key**: `supermaven`
+
+**Key Highlights**:
+- `SupermavenSuggestion` - AI code suggestions
+- `SupermavenKeyword` - Suggestion keywords
+
+### copilot.lua
+**Repository**: [zbirenbaum/copilot.lua](https://github.com/zbirenbaum/copilot.lua)
+**Config Key**: `copilot`
+
+**Key Highlights**:
+- `CopilotSuggestion` - GitHub Copilot suggestions
+- `CopilotAnnotation` - Completion annotations
 - `BlinkCmpDoc` - Documentation window
 - `BlinkCmpKind*` - LSP symbol kinds
 - `BlinkCmpLabel` - Completion labels
@@ -216,6 +241,97 @@ Complete reference of all supported plugins with their highlight groups and conf
 ### vim-gitgutter
 **Repository**: [airblade/vim-gitgutter](https://github.com/airblade/vim-gitgutter)
 **Config Key**: `gitgutter`
+
+### mason.nvim
+**Repository**: [williamboman/mason.nvim](https://github.com/williamboman/mason.nvim)
+**Config Key**: `mason`
+
+**Key Highlights**:
+- `MasonNormal` - Mason window
+- `MasonHeader` - Section headers
+- `MasonPackageName` - Package names
+- `MasonHighlight` - Highlighted items
+
+### neogit
+**Repository**: [TimUntersberger/neogit](https://github.com/TimUntersberger/neogit)
+**Config Key**: `neogit`
+
+**Key Highlights**:
+- `NeogitBranch` - Branch names
+- `NeogitDiffAdd` - Added lines
+- `NeogitDiffDelete` - Deleted lines
+- `NeogitHunkHeader` - Hunk headers
+
+### octo.nvim
+**Repository**: [pwntester/octo.nvim](https://github.com/pwntester/octo.nvim)
+**Config Key**: `octo`
+
+**Key Highlights**:
+- `OctoDetailsLabel` - Detail labels
+- `OctoDetailsValue` - Detail values
+- `OctoDirty` - Modified items
+- `OctoIssueTitle` - Issue titles
+
+### ale
+**Repository**: [dense-analysis/ale](https://github.com/dense-analysis/ale)
+**Config Key**: `ale`
+
+**Key Highlights**:
+- `ALEError` - Error indicators
+- `ALEWarning` - Warning indicators
+- `ALEInfo` - Info indicators
+
+## 🎨 UI Enhancement
+
+### snacks.nvim
+**Repository**: [folke/snacks.nvim](https://github.com/folke/snacks.nvim)
+**Config Key**: `snacks`
+
+**Key Highlights**:
+- `SnacksNormal` - Snacks windows
+- `SnacksBorder` - Window borders
+- `SnacksTitle` - Window titles
+- `SnacksFooter` - Window footers
+
+### nvim-notify
+**Repository**: [rcarriga/nvim-notify](https://github.com/rcarriga/nvim-notify)
+**Config Key**: `notify`
+
+**Key Highlights**:
+- `NotifyERRORBorder` - Error notification border
+- `NotifyWARNBorder` - Warning notification border
+- `NotifyINFOBorder` - Info notification border
+- `NotifyDEBUGBorder` - Debug notification border
+
+### render-markdown.nvim
+**Repository**: [MeanderingProgrammer/render-markdown.nvim](https://github.com/MeanderingProgrammer/render-markdown.nvim)
+**Config Key**: `render-markdown`
+
+**Key Highlights**:
+- `RenderMarkdownH1` - Heading level 1
+- `RenderMarkdownH2` - Heading level 2
+- `RenderMarkdownCode` - Code blocks
+- `RenderMarkdownBullet` - List bullets
+
+### headlines.nvim
+**Repository**: [lukas-reineke/headlines.nvim](https://github.com/lukas-reineke/headlines.nvim)
+**Config Key**: `headlines`
+
+**Key Highlights**:
+- `Headline1` - First level headlines
+- `Headline2` - Second level headlines
+- `CodeBlock` - Code block backgrounds
+- `Dash` - Horizontal rules
+
+### grug-far.nvim
+**Repository**: [MagicDuck/grug-far.nvim](https://github.com/MagicDuck/grug-far.nvim)
+**Config Key**: `grug-far`
+
+**Key Highlights**:
+- `GrugFarHelpHeader` - Help headers
+- `GrugFarResultsMatch` - Search matches
+- `GrugFarResultsPath` - File paths
+- `GrugFarInputLabel` - Input labels
 
 ## ✨ Mini.nvim Ecosystem
 

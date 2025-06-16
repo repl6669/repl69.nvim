@@ -1,4 +1,3 @@
-# Repl69 Architecture Guide
 
 Understanding the modular architecture that makes repl69 maintainable and extensible.
 
@@ -31,13 +30,17 @@ lua/repl69/
     ├── health.lua          # Health check highlights
     ├── semantic-tokens.lua # Enhanced LSP semantics
     ├── 
-    ├── # Plugin highlights (50+ files)
+    ├── # Plugin highlights (69+ files)
     ├── telescope.lua       # Telescope plugin
     ├── cmp.lua            # Completion plugin
     ├── blink.lua          # Modern completion
     ├── flash.lua          # Motion plugin
     ├── alpha.lua          # Dashboard plugin
-    ├── mini_*.lua         # Mini.nvim ecosystem (13 files)
+    ├── mini_*.lua         # Mini.nvim ecosystem (16 files)
+    ├── mason.lua          # Package manager
+    ├── neogit.lua         # Git integration
+    ├── snacks.lua         # UI utilities
+    ├── render-markdown.lua # Markdown rendering
     └── ...                # Many more plugins
 ```
 
@@ -127,12 +130,15 @@ colors = {
 ### 3. Plugin Orchestration (`groups/init.lua`)
 
 ```lua
--- Maps plugin names to highlight modules
 M.plugins = {
   ["telescope.nvim"] = "telescope",
   ["nvim-cmp"] = "cmp",
   ["flash.nvim"] = "flash",
-  -- ... 50+ plugin mappings
+  ["blink.cmp"] = "blink",
+  ["mason.nvim"] = "mason",
+  ["snacks.nvim"] = "snacks",
+  ["render-markdown.nvim"] = "render-markdown",
+  -- ... 69+ plugin mappings
 }
 
 -- Loads and combines highlights
@@ -389,6 +395,6 @@ assert(next(hl), 'Highlight not found')
 
 ---
 
-This modular architecture enables repl69 to support 50+ plugins while maintaining performance, consistency, and extensibility. The systematic approach makes it easy for contributors to add new plugins and for users to customize their experience.
+This modular architecture enables repl69 to support 69+ plugins while maintaining performance, consistency, and extensibility. The systematic approach makes it easy for contributors to add new plugins and for users to customize their experience.
 
 *For practical examples, see the [Plugin Guide](PLUGIN_GUIDE.md) and [Plugin Reference](PLUGINS.md)*
