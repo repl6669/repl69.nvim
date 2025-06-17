@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) Jakub Theimer
+Copyright (c) 2024 Jakub Theimer
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,3 +19,29 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+---
+
+## Acknowledgments
+
+This project was inspired by and uses architectural patterns from:
+
+### tokyonight.nvim
+
+Copyright (c) 2021 Folke Lemaitre
+Licensed under the Apache License, Version 2.0
+Repository: https://github.com/folke/tokyonight.nvim
+
+The modular plugin architecture, configuration system, and several design
+patterns in this project are derived from or inspired by tokyonight.nvim.
+We are grateful to Folke Lemaitre for creating such an excellent foundation
+for Neovim colorscheme development.
+
+### preto.vim
+
+Original color inspiration from preto.vim
+Repository: https://github.com/ewilazarus/preto
+
+The core color philosophy and grayscale approach is inspired by the original
+preto.vim colorscheme.
+

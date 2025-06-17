@@ -1,2 +1,3 @@
-package.loaded["repl69.palette"] = nil
-require("repl69").colorscheme()
+require("repl69").load({
+  style = vim.o.background == "light" and "hell" or nil,
+})

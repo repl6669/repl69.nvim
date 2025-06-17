@@ -4,6 +4,13 @@ Monochrome colorscheme with decent accents for neovim.
 
 ## Getting started
 
+Setup with basic configuration:
+
+```lua
+require("repl69").setup()
+vim.cmd("colorscheme repl69")
+```
+
 ### [lazy.nvim](https://lazy.folke.io/installation)
 
 ```lua
@@ -36,26 +43,87 @@ return {
 
 ```lua
 require("repl69").setup({
+    -- Core settings
+    transparent = false,
+    terminal_colors = true,
+
+    -- Styling options
+    styles = {
+        comments = { italic = true },
+        keywords = { bold = true },
+        functions = { bold = true },
+        variables = {},
+    },
+
+    -- Plugin support
+    plugins = {
+        auto = true,  -- Auto-detect and enable installed plugins
+        -- Or enable specific plugins:
+        -- telescope = true,
+        -- cmp = true,
+        -- treesitter = true,
+    },
+
+    -- Legacy support
     enable = {
-        -- Set terminal colors
+        -- Set terminal colors (legacy)
         terminal = true,
     },
 
-    -- Enabled styles
-    styles = {
-        bold = true,
-        italic = true,
-        transparency = true,
-    },
-
-    -- Custom highlight groups
-    highlight_groups = {},
+    -- Custom highlight overrides
+    on_highlights = function(highlights, colors)
+        -- Override specific highlights
+        -- highlights.Comment = { fg = colors.gray600, italic = true }
+    end,
 })
 
 vim.cmd("colorscheme repl69")
 ```
 
+## Plugins
+
+`repl69` has evolved to support a comprehensive ecosystem of popular Neovim plugins, providing consistent theming across your entire workflow. The plugin system automatically detects installed plugins and applies appropriate highlights.
+
+### Auto-detection
+
+```lua
+require("repl69").setup({
+    plugins = {
+        auto = true,  -- Automatically detect and style installed plugins
+    }
+})
+```
+
+### Manual Configuration
+
+```lua
+require("repl69").setup({
+    plugins = {
+        -- Core editing
+        telescope = true,
+        cmp = true,
+        treesitter = true,
+
+        -- Modern tools
+        blink = true,
+        flash = true,
+        aerial = true,
+
+        -- Development
+        dap = true,
+        gitsigns = true,
+        neotest = true,
+
+        -- UI enhancements
+        alpha = true,
+        noice = true,
+    }
+})
+```
+
+For a complete list of supported plugins and detailed configuration options, see [PLUGINS.md](docs/PLUGINS.md).
+
 ## Credits
 
-- Heavily based on [rose-pine](https://github.com/rose-pine/neovim) neovim theme.
-- Inspired by [presto.vim](https://github.com/ewilazarus/preto/blob/master/colors/preto.vim).
+- Architecture inspiration from [@folke](https://github.com/folke) and [tokyonight.nvim](https://github.com/folke/tokyonight.nvim)
+- Initially inspired by [presto.vim](https://github.com/ewilazarus/preto/blob/master/colors/preto.vim)
