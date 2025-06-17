@@ -2,7 +2,6 @@ local Util = require("repl69.util")
 
 local M = {}
 
----@type repl69.HighlightsFn
 function M.get(c, opts)
   local transparent = opts.transparent
   local styles = opts.styles
@@ -14,10 +13,13 @@ function M.get(c, opts)
     Conceal                     = { bg = c.none },
     CurSearch                   = { fg = c.black, bg = c.orange500 },
     Cursor                      = { fg = c.gray50, bg = c.gray700 },
+    lCursor                     = { fg = c.bg, bg = c.gray100 },
+    CursorIM                    = { fg = c.bg, bg = c.gray100 },
     CursorColumn                = { bg = c.gray925 },
     CursorLine                  = { bg = c.gray925 },
     CursorLineNr                = { fg = c.gray450, bold = styles.keywords.bold },
     Directory                   = { fg = c.gray200, bold = styles.keywords.bold },
+    EndOfBuffer                 = { fg = c.bg }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
     ErrorMsg                    = { fg = c.error, bold = styles.keywords.bold },
     FloatBorder                 = { fg = c.border, bg = transparent and c.none or c.bg_float },
     FloatTitle                  = { fg = c.gray200, bg = transparent and c.none or c.bg_float, bold = styles.keywords.bold },
@@ -25,15 +27,21 @@ function M.get(c, opts)
     Folded                      = { fg = c.gray50, bg = transparent and c.none or c.bg_popup },
     IncSearch                   = "CurSearch",
     LineNr                      = { fg = c.gray800 },
+    LineNrAbove                 = { fg = c.gray800 },
+    LineNrBelow                 = { fg = c.gray800 },
     MatchParen                  = { fg = c.gray500, bg = c.gray800 },
     ModeMsg                     = { fg = c.gray500 },
+    MsgArea                     = { fg = c.gray500 }, -- Area for messages and cmdline
     MoreMsg                     = { fg = c.gray300 },
     NonText                     = { fg = c.gray850 },
     Normal                      = { fg = c.gray100, bg = transparent and c.none or c.bg },
     NormalFloat                 = { fg = c.fg_float, bg = transparent and c.none or c.bg_float },
     NormalNC                    = { fg = c.gray50, bg = transparent and c.none or c.bg },
+    NormalSB                    = { fg = c.fg_sidebar, bg = c.bg_sidebar }, -- normal text in sidebar
     NvimInternalError           = "ErrorMsg",
     Pmenu                       = { fg = c.gray500, bg = transparent and c.none or c.bg_popup },
+    PmenuMatch                  = { bg = transparent and c.none or c.bg_popup, fg = c.orange500 }, -- Popup menu: Matched text in normal item.
+    PmenuMatchSel               = { bg = transparent and c.none or c.visual, fg = c.orange500 }, -- Popup menu: Matched text in selected item.
     PmenuExtra                  = { fg = c.gray800, bg = transparent and c.none or c.bg_popup },
     PmenuExtraSel               = { fg = c.gray500, bg = transparent and c.none or c.gray750 },
     PmenuKind                   = { fg = c.gray200, bg = transparent and c.none or c.bg_popup },
@@ -42,11 +50,13 @@ function M.get(c, opts)
     PmenuSel                    = { fg = c.gray50, bg = transparent and c.none or c.gray750 },
     PmenuThumb                  = { bg = transparent and c.none or c.gray850 },
     Question                    = { fg = c.gray400 },
+    QuickFixLine                = { bg = c.bg_visual, bold = true }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
     RedrawDebugClear            = { fg = c.black, bg = c.gray400 },
     RedrawDebugComposed         = { fg = c.black, bg = c.gray500 },
     RedrawDebugRecompose        = { fg = c.black, bg = c.gray600 },
     Search                      = { fg = c.gray50, bg = c.gray400 },
     SignColumn                  = { fg = c.gray50, bg = transparent and c.none or c.bg },
+    SignColumnSB                = { bg = c.bg_sidebar, fg = c.gray800 }, -- column where |signs| are displayed
     SpecialKey                  = { fg = c.gray200 },
     SpellBad                    = { sp = c.gray500, undercurl = true },
     SpellCap                    = { sp = c.gray500, undercurl = true },
@@ -68,6 +78,7 @@ function M.get(c, opts)
     WinBar                      = { fg = c.gray500, bg = transparent and c.none or c.bg_statusline },
     WinBarNC                    = { fg = c.gray850, bg = transparent and c.none or c.bg_statusline },
     WinSeparator                = { fg = c.border },
+    Whitespace                  = { fg = c.gray800 }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
 
     -- These groups are for the native LSP client. Some other LSP clients may
     -- use these groups, or use their own.
@@ -76,7 +87,7 @@ function M.get(c, opts)
     LspReferenceWrite           = { bg = c.fg_gutter }, -- used for highlighting "write" references
     LspSignatureActiveParameter = { bg = Util.blend_bg(c.bg_visual, 0.40), bold = true },
     LspCodeLens                 = { fg = c.comment },
-    LspInlayHint                = { bg = Util.blend_bg(c.blue700, 0.10), fg = c.dark3 },
+    LspInlayHint                = { fg = c.comment },
     LspInfoBorder               = { fg = c.border_highlight, bg = c.bg_float },
 
     -- Diagnostics
@@ -146,6 +157,17 @@ function M.get(c, opts)
     Todo                        = { fg = c.bg_border_info, bg = c.info, bold = styles.keywords.bold },
     Type                        = { fg = c.gray50, bold = styles.keywords.bold },
     TypeDef                     = "Type",
+    Italic                      = { italic = true, fg = c.gray100 }, -- (preferred) any italic text
+    Bold                        = { bold = true, fg = c.gray100 }, -- (preferred) any bold text
+    debugBreakpoint             = { bg = Util.blend_bg(c.info, 0.10), fg = c.info }, -- used for breakpoint colors in terminal-debug
+    debugPC                     = { bg = c.bg_sidebar }, -- used for highlighting the current line in terminal-debug
+    dosIniLabel                 = "@property",
+    helpCommand                 = { bg = c.black, fg = c.info },
+    helpExample                 = { fg = c.comment },
+    -- htmlH1                      = { fg = c.green500, bold = true },
+    -- htmlH2                      = { fg = c.orange500, bold = true },
+    qfFileName                  = { fg = c.trace },
+    qfLineNr                    = { fg = c.gray700 },
 
     -- Health
     healthError                 = { fg = c.error },
@@ -160,11 +182,11 @@ function M.get(c, opts)
     diffAdded                   = { bg = c.diff.add, fg = c.git.add },
     diffRemoved                 = { bg = c.diff.delete, fg = c.git.delete },
     diffChanged                 = { bg = c.diff.change, fg = c.git.change },
-    diffOldFile                 = { fg = c.git.text, bg=c.diff.delete },
-    diffNewFile                 = { fg = c.git.text, bg=c.diff.add },
-    diffFile                    = { fg = c.blue },
+    diffOldFile                 = { fg = c.git.delete, bg=c.diff.delete },
+    diffNewFile                 = { fg = c.git.add, bg=c.diff.add },
+    diffFile                    = { fg = c.trace, bg = Util.blend_bg(c.trace, 0.10) },
     diffLine                    = { fg = c.comment },
-    diffIndexLine               = { fg = c.purple300 },
+    diffIndexLine               = { fg = c.purple100 },
   }
 end
 
