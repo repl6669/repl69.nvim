@@ -28,7 +28,7 @@ function M.get(c, opts)
     SignColumnSB = { bg = c.bg_sidebar, fg = c.gray800 }, -- column where |signs| are displayed
 
     -- Search
-    Search = { fg = c.gray50, bg = c.gray400 }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
+    Search = { fg = c.gray100, bg = c.bg_search }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
     IncSearch = "CurSearch", -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
     Substitute = "IncSearch", -- |:substitute| replacement text highlighting
 
@@ -110,9 +110,9 @@ function M.get(c, opts)
     WildMenu = "IncSearch", -- current match in 'wildmenu' completion
 
     -- LSP
-    LspReferenceText = { bg = c.fg_gutter }, -- used for highlighting "text" references
-    LspReferenceRead = { bg = c.fg_gutter }, -- used for highlighting "read" references
-    LspReferenceWrite = { bg = c.fg_gutter }, -- used for highlighting "write" references
+    LspReferenceText = { bg = c.bg_search }, -- used for highlighting "text" references
+    LspReferenceRead = { bg = c.bg_search }, -- used for highlighting "read" references
+    LspReferenceWrite = { bg = c.bg_search }, -- used for highlighting "write" references
     LspSignatureActiveParameter = { bg = Util.blend_bg(c.bg_visual, 0.40), bold = true },
     LspCodeLens = { fg = c.comment },
     LspInlayHint = { fg = c.comment },
