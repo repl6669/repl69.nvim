@@ -26,7 +26,7 @@ describe("loading respects vim.o.background", function()
     vim.o.background = "light"
     vim.cmd.colorscheme("repl69")
     assert.same("light", vim.o.background)
-    assert.same("repl69-dawn", vim.g.colors_name)
+    assert.same("repl69-hell", vim.g.colors_name)
   end)
 
   it("= dark with void", function()
@@ -36,11 +36,11 @@ describe("loading respects vim.o.background", function()
     assert.same("repl69-void", vim.g.colors_name)
   end)
 
-  it("= dark with dawn", function()
+  it("= dark with hell", function()
     vim.o.background = "dark"
-    vim.cmd.colorscheme("repl69-dawn")
+    vim.cmd.colorscheme("repl69-hell")
     assert.same("light", vim.o.background)
-    assert.same("repl69-dawn", vim.g.colors_name)
+    assert.same("repl69-hell", vim.g.colors_name)
   end)
 
   it("= light with void", function()
@@ -50,11 +50,11 @@ describe("loading respects vim.o.background", function()
     assert.same("repl69-void", vim.g.colors_name)
   end)
 
-  it("= light with dawn", function()
+  it("= light with hell", function()
     vim.o.background = "light"
-    vim.cmd.colorscheme("repl69-dawn")
+    vim.cmd.colorscheme("repl69-hell")
     assert.same("light", vim.o.background)
-    assert.same("repl69-dawn", vim.g.colors_name)
+    assert.same("repl69-hell", vim.g.colors_name)
   end)
 
   it(" and switches to light", function()
@@ -62,7 +62,7 @@ describe("loading respects vim.o.background", function()
     vim.cmd.colorscheme("repl69-void")
     vim.o.background = "light"
     assert.same("light", vim.o.background)
-    assert.same("repl69-dawn", vim.g.colors_name)
+    assert.same("repl69-hell", vim.g.colors_name)
   end)
 
   it(" and switches to dark", function()

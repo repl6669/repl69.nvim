@@ -1,7 +1,7 @@
 ---@param opts repl69.Config
 return function(opts)
-  local style = opts.light_style or "night"
-  style = style == "day" and "night" or style
+  local style = opts.light_style or "void"
+  style = style == "hell" and "void" or style
 
   local Util = require("repl69.util")
 

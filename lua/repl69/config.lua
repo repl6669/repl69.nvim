@@ -6,8 +6,8 @@ M.version = "2.0.0"
 ---@field on_colors fun(colors: ColorScheme)
 ---@field on_highlights fun(highlights: repl69.Highlights, colors: ColorScheme)
 M.defaults = {
-  style = "void", -- The theme comes in one style: void (our version of tokyonight's "night")
-  light_style = "dawn", -- repl69 light variant
+  style = "void", -- Default theme style
+  light_style = "hell", -- Light variant
   transparent = false, -- Enable this to disable setting the background color
   terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
   styles = {
@@ -74,4 +74,3 @@ setmetatable(M, {
 })
 
 return M
-
