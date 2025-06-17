@@ -11,7 +11,7 @@ function M.get(c)
     NeogitBranch               = { fg = c.pink },
     NeogitRemote               = { fg = c.purple },
     NeogitHunkHeader           = { bg = c.bg_dark, fg = c.fg },
-    NeogitHunkHeaderHighlight  = { bg = c.gray800, fg = c.blue },
+    NeogitHunkHeaderHighlight  = { bg = c.bg_dark, fg = c.blue },
     NeogitDiffContextHighlight = { bg = Util.blend_bg(c.gray800, 0.5), fg = c.gray400 },
     NeogitDiffDeleteHighlight  = { fg = c.git.delete, bg = c.diff.delete },
     NeogitDiffAddHighlight     = { fg = c.git.add, bg = c.diff.add },

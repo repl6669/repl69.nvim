@@ -9,9 +9,10 @@ function M.get(c, opts)
   -- stylua: ignore
   return {
     MiniTestEmphasis = { bold = styles.keywords.bold },
-    MiniTestFail = { fg = c.red, bold = styles.keywords.bold },
-    MiniTestPass = { fg = c.green, bold = styles.keywords.bold },
+    MiniTestFail = { fg = c.red500, bold = styles.keywords.bold },
+    MiniTestPass = { fg = c.green500, bold = styles.keywords.bold },
   }
 end
 
 return M
+

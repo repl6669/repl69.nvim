@@ -31,7 +31,7 @@ function M.setup(opts)
     add = Util.blend_bg(colors.git.add, 0.20),
     delete = Util.blend_bg(colors.git.delete, 0.20),
     change = Util.blend_bg(colors.git.change, 0.20),
-    text = colors.git.change,
+    text = Util.blend_bg(colors.git.text, 0.20),
   }
 
   colors.black = Util.blend_bg(colors.bg, 0.8, "#000000")

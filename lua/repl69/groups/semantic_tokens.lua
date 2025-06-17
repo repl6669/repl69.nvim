@@ -2,8 +2,8 @@ local Util = require("repl69.util")
 
 local M = {}
 
- M.url = "https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/#semanticTokens"
- 
+M.url = "https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/#semanticTokens"
+
 function M.get(c, opts)
   local styles = opts.styles
 
@@ -19,7 +19,7 @@ function M.get(c, opts)
     ["@lsp.type.escapeSequence"]               = "@string.escape",
     ["@lsp.type.formatSpecifier"]              = "@markup.list",
     ["@lsp.type.generic"]                      = "@variable",
-    ["@lsp.type.interface"]                    = { fg = Util.blend_fg(c.gray100, 0.7) },
+    ["@lsp.type.interface"]                    = { fg = Util.blend_fg(c.gray100, 0.80) },
     ["@lsp.type.keyword"]                      = "@keyword",
     ["@lsp.type.lifetime"]                     = "@keyword.storage",
     ["@lsp.type.namespace"]                    = "@module",
@@ -55,3 +55,4 @@ function M.get(c, opts)
 end
 
 return M
+

@@ -6,9 +6,10 @@ M.url = "https://github.com/supermaven-inc/supermaven-nvim"
 function M.get(c, opts)
   -- stylua: ignore
   local ret = {
-    SupermavenSuggestion = { fg = c.gray800 },
+    SupermavenSuggestion = { fg = c.comment },
   }
   return ret
 end
 
 return M
+

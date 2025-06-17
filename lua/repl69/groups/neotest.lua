@@ -12,13 +12,13 @@ function M.get(c, opts)
     NeotestBorder       = { fg = c.gray200 },
     NeotestDir          = { fg = c.gray200 },
     NeotestExpandMarker = { fg = c.gray500 },
-    NeotestFailed       = { fg = c.red },
+    NeotestFailed       = { fg = c.red500 },
     NeotestFile         = { fg = c.gray400 },
     NeotestFocused      = { fg = c.gray100 },
     NeotestIndent       = { fg = c.gray500 },
     NeotestMarked       = { fg = c.gray200 },
     NeotestNamespace    = { fg = c.gray300 },
-    NeotestPassed       = { fg = c.green },
+    NeotestPassed       = { fg = c.green500 },
     NeotestRunning      = { fg = c.gray400 },
     NeotestSkipped      = { fg = c.gray200 },
     NeotestTarget       = { fg = c.gray200 },
@@ -28,3 +28,4 @@ function M.get(c, opts)
 end
 
 return M
+

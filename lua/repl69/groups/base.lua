@@ -4,26 +4,19 @@ local M = {}
 
 ---@type repl69.HighlightsFn
 function M.get(c, opts)
-	local transparent = opts.transparent
-	local styles = opts.styles
+  local transparent = opts.transparent
+  local styles = opts.styles
 
   -- stylua: ignore
   return {
     -- Base editor highlights
     ColorColumn                 = { bg = c.gray925 },
     Conceal                     = { bg = c.none },
-    CurSearch                   = { fg = c.black, bg = c.green300 },
+    CurSearch                   = { fg = c.black, bg = c.orange500 },
     Cursor                      = { fg = c.gray50, bg = c.gray700 },
     CursorColumn                = { bg = c.gray925 },
     CursorLine                  = { bg = c.gray925 },
     CursorLineNr                = { fg = c.gray450, bold = styles.keywords.bold },
-    DiffAdd                     = { bg = c.diff.add },
-    DiffChange                  = { bg = c.diff.change },
-    DiffDelete                  = { bg = c.diff.delete },
-    DiffText                    = { bg = c.diff.text },
-    diffAdded                   = "DiffAdd",
-    diffChanged                 = "DiffChange",
-    diffRemoved                 = "DiffDelete",
     Directory                   = { fg = c.gray200, bold = styles.keywords.bold },
     ErrorMsg                    = { fg = c.error, bold = styles.keywords.bold },
     FloatBorder                 = { fg = c.border, bg = transparent and c.none or c.bg_float },
@@ -41,7 +34,7 @@ function M.get(c, opts)
     NormalNC                    = { fg = c.gray50, bg = transparent and c.none or c.bg },
     NvimInternalError           = "ErrorMsg",
     Pmenu                       = { fg = c.gray500, bg = transparent and c.none or c.bg_popup },
-    PmenuExtra                  = { fg = c.gray850, bg = transparent and c.none or c.bg_popup },
+    PmenuExtra                  = { fg = c.gray800, bg = transparent and c.none or c.bg_popup },
     PmenuExtraSel               = { fg = c.gray500, bg = transparent and c.none or c.gray750 },
     PmenuKind                   = { fg = c.gray200, bg = transparent and c.none or c.bg_popup },
     PmenuKindSel                = { fg = c.gray500, bg = transparent and c.none or c.gray750 },
@@ -75,6 +68,16 @@ function M.get(c, opts)
     WinBar                      = { fg = c.gray500, bg = transparent and c.none or c.bg_statusline },
     WinBarNC                    = { fg = c.gray850, bg = transparent and c.none or c.bg_statusline },
     WinSeparator                = { fg = c.border },
+
+    -- These groups are for the native LSP client. Some other LSP clients may
+    -- use these groups, or use their own.
+    LspReferenceText            = { bg = c.fg_gutter }, -- used for highlighting "text" references
+    LspReferenceRead            = { bg = c.fg_gutter }, -- used for highlighting "read" references
+    LspReferenceWrite           = { bg = c.fg_gutter }, -- used for highlighting "write" references
+    LspSignatureActiveParameter = { bg = Util.blend_bg(c.bg_visual, 0.40), bold = true },
+    LspCodeLens                 = { fg = c.comment },
+    LspInlayHint                = { bg = Util.blend_bg(c.blue700, 0.10), fg = c.dark3 },
+    LspInfoBorder               = { fg = c.border_highlight, bg = c.bg_float },
 
     -- Diagnostics
     DiagnosticError             = { fg = c.error },
@@ -137,13 +140,32 @@ function M.get(c, opts)
     Statement                   = { fg = c.white, bold = styles.keywords.bold },
     StorageClass                = { fg = c.white, bold = styles.keywords.bold },
     String                      = { fg = c.gray450 },
+    Underlined                  = { underline = true },
     Structure                   = { fg = c.white, bold = styles.keywords.bold },
     Tag                         = { fg = c.white },
-    Todo                        = { fg = c.cyan500, bg = c.cyan500, bold = styles.keywords.bold },
+    Todo                        = { fg = c.bg_border_info, bg = c.info, bold = styles.keywords.bold },
     Type                        = { fg = c.gray50, bold = styles.keywords.bold },
     TypeDef                     = "Type",
+
+    -- Health
+    healthError                 = { fg = c.error },
+    healthSuccess               = { fg = c.hint },
+    healthWarning               = { fg = c.warning },
+
+    -- Diff
+    DiffAdd                     = { fg = c.git.add, bg = c.diff.add },
+    DiffChange                  = { fg = c.git.change, bg = c.diff.change },
+    DiffDelete                  = { fg = c.git.delete, bg = c.diff.delete },
+    DiffText                    = { fg = c.git.text, bg = c.diff.text },
+    diffAdded                   = { bg = c.diff.add, fg = c.git.add },
+    diffRemoved                 = { bg = c.diff.delete, fg = c.git.delete },
+    diffChanged                 = { bg = c.diff.change, fg = c.git.change },
+    diffOldFile                 = { fg = c.git.text, bg=c.diff.delete },
+    diffNewFile                 = { fg = c.git.text, bg=c.diff.add },
+    diffFile                    = { fg = c.blue },
+    diffLine                    = { fg = c.comment },
+    diffIndexLine               = { fg = c.purple300 },
   }
 end
 
 return M
-

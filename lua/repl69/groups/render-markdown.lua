@@ -8,9 +8,9 @@ M.url = "https://github.com/MeanderingProgrammer/render-markdown.nvim"
 function M.get(c, opts)
   -- stylua: ignore
   local ret = {
-    RenderMarkdownBullet    = {fg = c.orange}, -- horizontal rule
+    RenderMarkdownBullet    = { fg = c.orange}, -- horizontal rule
     RenderMarkdownCode      = { bg = c.bg_darker},
-    RenderMarkdownDash      = {fg = c.orange}, -- horizontal rule
+    RenderMarkdownDash      = { fg = c.orange}, -- horizontal rule
     RenderMarkdownTableHead = { fg = c.orange},
     RenderMarkdownTableRow  = { fg = c.orange700},
     RenderMarkdownCodeInline = "@markup.raw.markdown_inline"

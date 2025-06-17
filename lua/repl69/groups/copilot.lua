@@ -6,9 +6,10 @@ M.url = "https://github.com/zbirenbaum/copilot.lua"
 function M.get(c, opts)
   -- stylua: ignore
   return {
-    CopilotAnnotation = { fg = c.gray850 },
-    CopilotSuggestion = { fg = c.gray850 },
+    CopilotAnnotation = { fg = c.comment },
+    CopilotSuggestion = { fg = c.comment },
   }
 end
 
 return M
+

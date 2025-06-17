@@ -8,17 +8,16 @@ M.url = "https://github.com/pwntester/octo.nvim"
 function M.get(c)
   -- stylua: ignore
   return {
-    OctoDetailsLabel          = { fg = c.blue100, bold = true },
+    OctoDetailsLabel          = { fg = c.orange700, bold = true },
     OctoDetailsValue          = "@variable.member",
-    OctoDirty                 = { fg = c.orange, bold = true },
-    OctoIssueTitle            = { fg = c.purple, bold = true },
+    OctoDirty                 = { fg = c.git.dirty, bold = true },
+    OctoIssueTitle            = { fg = c.orange, bold = true },
     OctoStateChangesRequested = "DiagnosticVirtualTextWarn",
     OctoStateClosed           = "DiagnosticVirtualTextError",
-    OctoStateMerged           = { bg = Util.blend_bg(c.pink, 0.1), fg = c.pink },
+    OctoStateMerged           = { bg = Util.blend_bg(c.pink700, 0.10), fg = c.pink700 },
     OctoStateOpen             = "DiagnosticVirtualTextHint",
     OctoStatePending          = "DiagnosticVirtualTextWarn",
-    OctoStatusColumn          = { fg = c.blue100 },
-
+    OctoStatusColumn          = { fg = c.orange700 },
   }
 end
 

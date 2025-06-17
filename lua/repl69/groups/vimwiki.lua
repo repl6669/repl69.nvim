@@ -6,15 +6,25 @@ M.url = "https://github.com/vimwiki/vimwiki"
 function M.get(c, opts)
   -- stylua: ignore
   local ret = {
-    VimwikiLink = { fg = c.blue, bg = c.none },
-    VimwikiHeaderChar = { fg = c.yellow, bg = c.none },
-    VimwikiHR = { fg = c.yellow, bg = c.none },
-    VimwikiList = { fg = c.orange, bg = c.none },
-    VimwikiTag = { fg = c.green, bg = c.none },
-    VimwikiMarkers = { fg = c.blue, bg = c.none },
+    VimwikiLink = { fg = c.blue700, bg = c.none },
+    VimwikiHeaderChar = { fg = c.yellow700, bg = c.none },
+    VimwikiHR = { fg = c.yellow700, bg = c.none },
+    VimwikiList = { fg = c.orange700, bg = c.none },
+    VimwikiTag = { fg = c.green700, bg = c.none },
+    VimwikiMarkers = { fg = c.blue700, bg = c.none },
   }
-  
-  local rainbow_colors = { c.red, c.orange, c.yellow, c.green, c.cyan, c.blue, c.purple, c.pink }
+
+  local rainbow_colors = {
+    c.green700,
+    c.orange700,
+    c.yellow700,
+    c.red700,
+    c.pink700,
+    c.purple700,
+    c.blue700,
+    c.cyan700,
+  }
+
   for i, color in ipairs(rainbow_colors) do
     ret["VimwikiHeader" .. i] = { fg = color, bg = c.none, bold = true }
   end
@@ -22,3 +32,4 @@ function M.get(c, opts)
 end
 
 return M
+

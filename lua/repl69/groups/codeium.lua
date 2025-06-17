@@ -6,9 +6,10 @@ M.url = "https://github.com/Exafunction/codeium.nvim"
 function M.get(c, opts)
   -- stylua: ignore
   local ret = {
-    CodeiumSuggestion = { fg = c.gray800 },
+    CodeiumSuggestion = { fg = c.comment },
   }
   return ret
 end
 
 return M
+

@@ -103,10 +103,10 @@ function M.get(c, opts)
     ["@comment"]                = "Comment",
     ["@comment.error"]          = { fg = c.error },
     ["@comment.warning"]        = { fg = c.warning },
-    ["@comment.todo"]           = { fg = c.todo, bg = c.todo },
-    ["@comment.hint"]           = { fg = c.hint, bg = c.hint },
-    ["@comment.info"]           = { fg = c.info, bg = c.info },
-    ["@comment.note"]           = { fg = c.cyan700, bg = c.cyan700 },
+    ["@comment.todo"]           = { fg = c.todo },
+    ["@comment.hint"]           = { fg = c.hint },
+    ["@comment.info"]           = { fg = c.info },
+    ["@comment.note"]           = { fg = c.trace },
 
     -- Markup
     ["@markup"]                 = "@none",
@@ -157,7 +157,7 @@ function M.get(c, opts)
     ["@tag"]                    = "Tag",
     ["@tag.attribute"]          = { fg = c.gray300 },
     ["@tag.delimiter"]          = { fg = c.gray500 },
-    ["@tag.delimiter.tsx"]      = { fg = Util.blend_bg(c.gray300, 0.7) },
+    ["@tag.delimiter.tsx"]      = { fg = Util.blend_bg(c.gray300, 0.80) },
     ["@tag.tsx"]                = { fg = c.gray200 },
     ["@tag.javascript"]         = { fg = c.gray200 },
 
@@ -214,15 +214,15 @@ function M.get(c, opts)
     ["@constructor.lua"]        = { fg = c.gray200 },
     ["@function.call.lua"]      = { fg = c.gray200 },
     ["@keyword.function.lua"]   = { fg = c.gray200 },
-    
+
     -- CSS
     ["@property.css"]           = { fg = c.gray300 },
     ["@string.css"]             = { fg = c.gray400 },
     ["@type.css"]               = { fg = c.gray200 },
-    
+
     -- JSON
     ["@label.json"]             = { fg = c.gray300 },
-    
+
     -- YAML
     ["@field.yaml"]             = { fg = c.gray300 },
   }
