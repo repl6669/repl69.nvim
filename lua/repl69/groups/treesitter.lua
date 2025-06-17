@@ -3,8 +3,8 @@ local Util = require("repl69.util")
 local M = {}
 
 function M.get(c, opts)
-	local transparent = opts.transparent
-	local styles = opts.styles
+  local transparent = opts.transparent
+  local styles = opts.styles
 
   -- stylua: ignore
   return {
@@ -229,4 +229,3 @@ function M.get(c, opts)
 end
 
 return M
-

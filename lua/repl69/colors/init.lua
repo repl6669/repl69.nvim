@@ -53,10 +53,10 @@ function M.setup(opts)
 
   colors.bg_dark = colors.gray925
   colors.bg_search = colors.gray400
-  colors.bg_visual = colors.gray800
+  colors.bg_visual = colors.gray900
 
-  colors.fg_dark = colors.gray50
-  colors.fg_float = colors.gray100
+  colors.fg_dark = colors.gray100
+  colors.fg_float = colors.gray200
   colors.fg_gutter = colors.gray800
   colors.fg_sidebar = colors.gray500
 

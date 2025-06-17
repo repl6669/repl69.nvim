@@ -1,7 +1,7 @@
 local hsl = require("repl69.util").hslToHex
 
 ---@class Palette
-local ret = {
+local c = {
   -- Semantic colors
   fg = hsl(0, 0, 88), -- #e0e0e0 (white)
   bg = hsl(0, 0, 0), -- #000000 (black)
@@ -35,75 +35,74 @@ local ret = {
   gray925 = hsl(0, 0, 8), -- #141414
   gray950 = hsl(0, 0, 4), -- #0a0a0a
 
-  -- Colors - your exact palette preserved
-  cyan = hsl(180, 90, 24), -- #067474
-  cyan100 = hsl(180, 90, 70), -- #00fbf9
-  cyan300 = hsl(180, 90, 50), -- #0df2f2
-  cyan500 = hsl(180, 90, 35), -- #09aaaa
-  cyan700 = hsl(180, 90, 20), -- #056161
-  cyan900 = hsl(180, 90, 10), -- #033030
+  cyan = hsl(180, 30, 42), -- #4b8b8b
+  cyan100 = hsl(180, 20, 70), -- #9ebfbf
+  cyan300 = hsl(180, 30, 60), -- #66b3b3
+  cyan500 = hsl(180, 30, 50), -- #59a6a6
+  cyan700 = hsl(180, 30, 40), -- #468585
+  cyan900 = hsl(180, 30, 30), -- #336464
 
-  green = hsl(158, 90, 42), -- #0bcb85
-  green100 = hsl(158, 90, 70), -- #00fbc0
-  green300 = hsl(158, 90, 50), -- #0df29e
-  green500 = hsl(158, 90, 35), -- #09aa6f
-  green700 = hsl(158, 90, 20), -- #00623c
-  green900 = hsl(158, 90, 10), -- #033020
+  green = hsl(158, 50, 42), -- #35a670
+  green100 = hsl(145, 40, 70), -- #84c49f
+  green300 = hsl(148, 50, 60), -- #4dcc80
+  green500 = hsl(148, 50, 50), -- #40bf73
+  green700 = hsl(148, 50, 40), -- #33995c
+  green900 = hsl(148, 50, 30), -- #267345
 
-  blue = hsl(240, 85, 65), -- #6366f1
-  blue100 = hsl(240, 85, 75), -- #8b8bff
-  blue300 = hsl(240, 85, 60), -- #4f46e5
-  blue500 = hsl(240, 85, 55), -- #3f3cf4
-  blue700 = hsl(240, 85, 45), -- #312ee6
-  blue900 = hsl(240, 85, 35), -- #2422d8
+  blue = hsl(224, 65, 42), -- #253db1
+  blue100 = hsl(224, 55, 70), -- #7b93d9
+  blue300 = hsl(224, 65, 60), -- #4a69d6
+  blue500 = hsl(224, 65, 50), -- #2c4fcc
+  blue700 = hsl(224, 65, 40), -- #233fa3
+  blue900 = hsl(224, 65, 30), -- #1a2f7a
 
-  pink = hsl(320, 80, 40), -- #c80084
-  pink100 = hsl(320, 80, 70), -- #ff6cca
-  pink300 = hsl(320, 80, 55), -- #fd00ae
-  pink500 = hsl(320, 80, 45), -- #e10095
-  pink700 = hsl(320, 80, 35), -- #af0074
-  pink900 = hsl(320, 80, 25), -- #7d0052
+  pink = hsl(332, 40, 42), -- #965681
+  pink100 = hsl(332, 30, 60), -- #b38399
+  pink300 = hsl(332, 40, 50), -- #b3668c
+  pink500 = hsl(332, 40, 40), -- #8f5270
+  pink700 = hsl(332, 40, 30), -- #6b3d54
+  pink900 = hsl(332, 40, 20), -- #462938
 
-  purple = hsl(265, 85, 65), -- #a855f7
-  purple100 = hsl(265, 85, 75), -- #c084fc
-  purple300 = hsl(265, 85, 60), -- #9333ea
-  purple500 = hsl(265, 85, 55), -- #8b5cf6
-  purple700 = hsl(265, 85, 45), -- #7c3aed
-  purple900 = hsl(265, 85, 35), -- #6d28d9
+  purple = hsl(265, 80, 42), -- #5816aa
+  purple100 = hsl(265, 85, 75), -- #b495f3
+  purple300 = hsl(265, 95, 65), -- #9350f9
+  purple500 = hsl(265, 95, 55), -- #7f26f7
+  purple700 = hsl(265, 95, 45), -- #6b0cd5
+  purple900 = hsl(265, 95, 30), -- #47089b
 
-  orange = hsl(25, 100, 40), -- #dc4a00
-  orange100 = hsl(25, 100, 70), -- #ffa056
-  orange300 = hsl(25, 100, 50), -- #ff5c00
-  orange500 = hsl(25, 100, 35), -- #c04100
-  orange700 = hsl(25, 100, 25), -- #892f00
-  orange900 = hsl(25, 100, 15), -- #531b00
+  orange = hsl(20, 100, 42), -- #d64700
+  orange100 = hsl(25, 90, 65), -- #f59943
+  orange300 = hsl(25, 100, 55), -- #ff7b0d
+  orange500 = hsl(20, 100, 45), -- #e64e00
+  orange700 = hsl(20, 100, 35), -- #b33d00
+  orange900 = hsl(20, 100, 25), -- #802c00
 
-  red = hsl(0, 100, 60), -- #ff001e
-  red100 = hsl(0, 100, 70), -- #ff565e
-  red300 = hsl(0, 100, 50), -- #f00000
-  red500 = hsl(0, 100, 35), -- #c30000
-  red700 = hsl(0, 100, 25), -- #8b0000
-  red900 = hsl(0, 100, 15), -- #540000
+  red = hsl(353, 100, 52), -- #ff0a29
+  red100 = hsl(358, 70, 70), -- #e96d72
+  red300 = hsl(358, 80, 60), -- #eb3d44
+  red500 = hsl(358, 80, 50), -- #e61922
+  red700 = hsl(358, 80, 40), -- #b8141b
+  red900 = hsl(358, 80, 30), -- #8a0f15
 
-  yellow = hsl(60, 100, 75), -- #feff67
-  yellow100 = hsl(60, 100, 80), -- #feff89
-  yellow300 = hsl(60, 100, 50), -- #feff00
-  yellow500 = hsl(60, 100, 40), -- #cbcc00
-  yellow700 = hsl(60, 100, 25), -- #7f7f00
-  yellow900 = hsl(60, 100, 15), -- #4c4c00
-
-  git = {
-    add = hsl(158, 90, 35), -- #09aa6f (green500)
-    change = hsl(25, 100, 50), -- #ff5c00 (orange500)
-    delete = hsl(0, 100, 35), -- #c30000 (red500)
-    untracked = hsl(60, 100, 40), -- #cbcc00 (yellow500)
-    ignore = hsl(0, 0, 32), -- #515151 (gray600)
-    dirty = hsl(0, 0, 60), -- #999999 (gray300)
-    merge = hsl(0, 0, 68), -- #adadad (gray200)
-    rename = hsl(0, 0, 52), -- #858585 (gray400)
-    stage = hsl(0, 0, 60), -- #999999 (gray300)
-    text = hsl(0, 0, 76), -- #c2c2c2 (gray100)
-  },
+  yellow = hsl(52, 68, 52), -- #c3c441
+  yellow100 = hsl(52, 58, 65), -- #d0cd76
+  yellow300 = hsl(52, 68, 55), -- #caca4d
+  yellow500 = hsl(52, 68, 45), -- #b1b227
+  yellow700 = hsl(52, 68, 35), -- #96971f
+  yellow900 = hsl(52, 68, 25), -- #6a6b16
 }
 
-return ret
+c.git = {
+  add = c.green500,
+  change = c.orange500,
+  delete = c.red500,
+  untracked = c.yellow500,
+  stage = c.cyan500,
+  ignore = c.comment,
+  text = c.gray200,
+  merge = c.gray300,
+  dirty = c.gray400,
+  rename = c.gray500,
+}
+
+return c

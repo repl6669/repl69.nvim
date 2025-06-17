@@ -6,15 +6,15 @@ M.url = "https://github.com/echasnovski/mini.icons"
 function M.get(c)
   -- stylua: ignore
   return {
-    MiniIconsGrey   = { fg = c.fg },
-    MiniIconsPurple = { fg = c.purple },
-    MiniIconsBlue   = { fg = c.blue },
-    MiniIconsAzure  = { fg = c.cyan },
-    MiniIconsCyan   = { fg = c.cyan },
-    MiniIconsGreen  = { fg = c.green },
-    MiniIconsYellow = { fg = c.yellow },
-    MiniIconsOrange = { fg = c.orange },
-    MiniIconsRed    = { fg = c.red },
+    MiniIconsGrey   = { fg = c.gray100 },
+    MiniIconsPurple = { fg = c.purple100 },
+    MiniIconsBlue   = { fg = c.blue100 },
+    MiniIconsAzure  = { fg = c.pink100 },
+    MiniIconsCyan   = { fg = c.cyan100 },
+    MiniIconsGreen  = { fg = c.green100 },
+    MiniIconsYellow = { fg = c.yellow100 },
+    MiniIconsOrange = { fg = c.orange100 },
+    MiniIconsRed    = { fg = c.red100 },
   }
 end
 
