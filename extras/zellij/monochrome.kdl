@@ -1,7 +1,6 @@
 // Repl69 Monochrome Zellij Colors
 // Add this file to your `CONFIG_DIR/themes` directory as described here:
 // https://zellij.dev/documentation/themes#getting-zellij-to-pick-up-the-theme
-
 themes {
   repl69 {
     text_unselected {
@@ -120,3 +119,4 @@ themes {
     }
   }
 }
+

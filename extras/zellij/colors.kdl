@@ -1,9 +1,8 @@
 // Repl69 Zellij Colors
 // Add this file to your `CONFIG_DIR/themes` directory as described here:
 // https://zellij.dev/documentation/themes#getting-zellij-to-pick-up-the-theme
-
 themes {
-  "repl69-color" {
+  repl69-color {
     text_unselected {
       base 122 122 122
       background 0 0 0
