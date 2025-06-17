@@ -52,7 +52,7 @@ function M.setup(opts)
     or colors.bg
 
   colors.bg_dark = colors.gray925
-  colors.bg_search = colors.gray400
+  colors.bg_search = colors.gray800
   colors.bg_visual = colors.gray900
 
   colors.fg_dark = colors.gray100
@@ -60,11 +60,22 @@ function M.setup(opts)
   colors.fg_gutter = colors.gray800
   colors.fg_sidebar = colors.gray500
 
+  colors.indent_active = colors.gray600
+  colors.indent_inactive = colors.gray850
+
   colors.error = colors.red700
   colors.warning = colors.orange700
   colors.info = colors.cyan700
+  colors.trace = colors.purple700
   colors.hint = colors.green700
   colors.todo = colors.cyan700
+
+  colors.bg_border_comment = Util.blend_bg(colors.comment, 0.30)
+  colors.bg_border_error = Util.blend_bg(colors.error, 0.30)
+  colors.bg_border_warning = Util.blend_bg(colors.warning, 0.30)
+  colors.bg_border_info = Util.blend_bg(colors.info, 0.30)
+  colors.bg_border_trace = Util.blend_bg(colors.trace, 0.30)
+  colors.bg_border_hint = Util.blend_bg(colors.hint, 0.30)
 
   -- stylua: ignore
   --- @class TerminalColors

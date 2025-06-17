@@ -4,9 +4,10 @@ M.url = "https://github.com/nvimdev/indentmini.nvim"
 
 ---@type repl69.HighlightsFn
 function M.get(c, opts)
+  -- stylua: ignore
   return {
-    IndentLine = { fg = c.gray850, nocombine = true },
-    IndentLineCurrent = { fg = c.gray400, nocombine = true },
+    IndentLine =        { fg = c.indent_inactive, nocombine = true },
+    IndentLineCurrent = { fg = c.indent_active, nocombine = true },
   }
 end
 
