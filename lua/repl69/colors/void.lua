@@ -2,10 +2,12 @@ local hsl = require("repl69.util").hslToHex
 
 ---@class Palette
 local ret = {
+  -- Semantic colors
+  fg = hsl(0, 0, 88), -- #e0e0e0 (white)
   bg = hsl(0, 0, 0), -- #000000 (black)
-  bg_dark = hsl(0, 0, 4), -- #0a0a0a (gray950)
-  bg_dark1 = hsl(0, 0, 8), -- #141414 (gray925)
-  bg_highlight = hsl(0, 0, 8), -- #141414 (gray925)
+  comment = hsl(0, 0, 28), -- #474747 (gray700)
+  bg_dark = hsl(0, 0, 8), -- #141414 (gray925)
+  bg_darker = hsl(0, 0, 4), -- #0a0a0a (gray950)
 
   -- Core grays - your carefully crafted palette preserved exactly
   black = hsl(0, 0, 0), -- #000000
@@ -48,12 +50,12 @@ local ret = {
   green700 = hsl(158, 90, 20), -- #00623c
   green900 = hsl(158, 90, 10), -- #033020
 
-  blue = hsl(240, 90, 42), -- #0b0bcb
-  blue100 = hsl(240, 90, 60), -- #3d3df5
-  blue300 = hsl(240, 90, 50), -- #0d0df2
-  blue500 = hsl(240, 90, 35), -- #0909aa
-  blue700 = hsl(240, 90, 25), -- #050561
-  blue900 = hsl(240, 90, 15), -- #040449
+  blue = hsl(240, 85, 65), -- #6366f1
+  blue100 = hsl(240, 85, 75), -- #8b8bff
+  blue300 = hsl(240, 85, 60), -- #4f46e5
+  blue500 = hsl(240, 85, 55), -- #3f3cf4
+  blue700 = hsl(240, 85, 45), -- #312ee6
+  blue900 = hsl(240, 85, 35), -- #2422d8
 
   pink = hsl(320, 80, 40), -- #c80084
   pink100 = hsl(320, 80, 70), -- #ff6cca
@@ -62,12 +64,12 @@ local ret = {
   pink700 = hsl(320, 80, 35), -- #af0074
   pink900 = hsl(320, 80, 25), -- #7d0052
 
-  purple = hsl(265, 90, 40), -- #5f00c9
-  purple100 = hsl(265, 90, 70), -- #b16aff
-  purple300 = hsl(265, 90, 55), -- #861afd
-  purple500 = hsl(265, 90, 45), -- #6b00e3
-  purple700 = hsl(265, 90, 35), -- #5300b0
-  purple900 = hsl(265, 90, 25), -- #3c017e
+  purple = hsl(265, 85, 65), -- #a855f7
+  purple100 = hsl(265, 85, 75), -- #c084fc
+  purple300 = hsl(265, 85, 60), -- #9333ea
+  purple500 = hsl(265, 85, 55), -- #8b5cf6
+  purple700 = hsl(265, 85, 45), -- #7c3aed
+  purple900 = hsl(265, 85, 35), -- #6d28d9
 
   orange = hsl(25, 100, 40), -- #dc4a00
   orange100 = hsl(25, 100, 70), -- #ffa056
@@ -90,21 +92,17 @@ local ret = {
   yellow700 = hsl(60, 100, 25), -- #7f7f00
   yellow900 = hsl(60, 100, 15), -- #4c4c00
 
-  -- Semantic colors
-  fg = hsl(0, 0, 88), -- #e0e0e0 (white)
-  comment = hsl(0, 0, 28), -- #474747 (gray700)
-
   git = {
-    add = hsl(158, 90, 30), -- #0ba46b (approx 300 variant)
-    change = hsl(32, 100, 50), -- #ff9800 (orange300)
-    delete = hsl(0, 100, 40), -- #cc0019 (approx 300 variant)
+    add = hsl(158, 90, 35), -- #09aa6f (green500)
+    change = hsl(25, 100, 50), -- #ff5c00 (orange500)
+    delete = hsl(0, 100, 35), -- #c30000 (red500)
+    untracked = hsl(60, 100, 40), -- #cbcc00 (yellow500)
     ignore = hsl(0, 0, 32), -- #515151 (gray600)
     dirty = hsl(0, 0, 60), -- #999999 (gray300)
     merge = hsl(0, 0, 68), -- #adadad (gray200)
     rename = hsl(0, 0, 52), -- #858585 (gray400)
     stage = hsl(0, 0, 60), -- #999999 (gray300)
     text = hsl(0, 0, 76), -- #c2c2c2 (gray100)
-    untracked = hsl(45, 100, 60), -- #ffe066
   },
 }
 

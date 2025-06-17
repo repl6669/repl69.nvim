@@ -10,7 +10,7 @@ function M.get(c, opts)
   return {
     MiniStatuslineDevinfo     = { fg = c.gray500, bg = c.gray800 },
     MiniStatuslineFileinfo    = { fg = c.gray500, bg = c.gray800 },
-    MiniStatuslineFilename    = { fg = c.gray500, bg = c.bg_highlight },
+    MiniStatuslineFilename    = { fg = c.gray500, bg = c.bg_dark },
     MiniStatuslineInactive    = { fg = c.gray200, bg = c.bg_statusline },
     MiniStatuslineModeCommand = { fg = c.black, bg = c.gray400, bold = styles.keywords.bold },
     MiniStatuslineModeInsert  = { fg = c.black, bg = c.gray300, bold = styles.keywords.bold },

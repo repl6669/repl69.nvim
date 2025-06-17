@@ -51,7 +51,7 @@ function M.setup(opts)
     or opts.styles.floats == "dark" and colors.gray950
     or colors.bg
 
-  colors.bg_highlight = colors.gray925
+  colors.bg_dark = colors.gray925
   colors.bg_search = colors.gray400
   colors.bg_visual = colors.gray800
 

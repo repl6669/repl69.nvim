@@ -8,7 +8,7 @@ M.url = "https://github.com/lukas-reineke/headlines.nvim"
 function M.get(c, opts)
   -- stylua: ignore
   local ret = {
-    CodeBlock = { bg = c.bg_dark },
+    CodeBlock = { bg = c.bg_darker},
     Headline  = "Headline1",
   }
   

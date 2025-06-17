@@ -6,7 +6,7 @@ M.url = "https://github.com/justinmk/vim-sneak"
 function M.get(c, opts)
   -- stylua: ignore
   return {
-    Sneak      = { fg = c.bg_highlight, bg = c.pink },
+    Sneak      = { fg = c.bg_dark, bg = c.pink },
     SneakScope = { bg = c.bg_visual },
   }
 end

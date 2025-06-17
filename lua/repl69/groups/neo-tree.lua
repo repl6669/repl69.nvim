@@ -19,7 +19,7 @@ function M.get(c, opts)
     NeoTreeNormalNC            = { fg = c.fg_sidebar, bg = opts.transparent and c.none or c.bg_sidebar },
     NeoTreeTabActive           = { fg = c.gray200, bg = opts.transparent and c.none or c.bg_dark, bold = true },
     NeoTreeTabInactive         = { fg = c.gray600, bg = opts.transparent and c.none or dark },
-    NeoTreeTabSeparatorActive  = { fg = c.gray200, bg = opts.transparent and c.none or c.bg_dark },
+    NeoTreeTabSeparatorActive  = { fg = c.gray200, bg = opts.transparent and c.none or c.bg_darker},
     NeoTreeTabSeparatorInactive= { fg = c.bg, bg = opts.transparent and c.none or dark },
   }
 end

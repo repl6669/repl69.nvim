@@ -16,7 +16,7 @@ function M.get(c, opts)
     NvimTreeIndentMarker = { fg = c.gray800 },
     NvimTreeNormal       = { fg = c.gray500, bg = c.bg_sidebar },
     NvimTreeNormalNC     = { fg = c.gray500, bg = c.bg_sidebar },
-    NvimTreeOpenedFile   = { bg = c.bg_highlight },
+    NvimTreeOpenedFile   = { bg = c.bg_dark },
     NvimTreeRootFolder   = { fg = c.gray200, bold = styles.keywords.bold },
     NvimTreeSpecialFile  = { fg = c.gray300, underline = true },
     NvimTreeSymlink      = { fg = c.gray200 },

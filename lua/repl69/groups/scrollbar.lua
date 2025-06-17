@@ -7,18 +7,18 @@ function M.get(c)
   -- stylua: ignore
   return {
     ScrollbarError        = { fg = c.error, bg = c.none },
-    ScrollbarErrorHandle  = { fg = c.error, bg = c.bg_highlight },
-    ScrollbarHandle       = { fg = c.none, bg = c.bg_highlight },
+    ScrollbarErrorHandle  = { fg = c.error, bg = c.bg_dark },
+    ScrollbarHandle       = { fg = c.none, bg = c.bg_dark },
     ScrollbarHint         = { fg = c.hint, bg = c.none },
-    ScrollbarHintHandle   = { fg = c.hint, bg = c.bg_highlight },
+    ScrollbarHintHandle   = { fg = c.hint, bg = c.bg_dark },
     ScrollbarInfo         = { fg = c.info, bg = c.none },
-    ScrollbarInfoHandle   = { fg = c.info, bg = c.bg_highlight },
+    ScrollbarInfoHandle   = { fg = c.info, bg = c.bg_dark },
     ScrollbarMisc         = { fg = c.purple, bg = c.none },
-    ScrollbarMiscHandle   = { fg = c.purple, bg = c.bg_highlight },
+    ScrollbarMiscHandle   = { fg = c.purple, bg = c.bg_dark },
     ScrollbarSearch       = { fg = c.orange, bg = c.none },
-    ScrollbarSearchHandle = { fg = c.orange, bg = c.bg_highlight },
+    ScrollbarSearchHandle = { fg = c.orange, bg = c.bg_dark },
     ScrollbarWarn         = { fg = c.warning, bg = c.none },
-    ScrollbarWarnHandle   = { fg = c.warning, bg = c.bg_highlight },
+    ScrollbarWarnHandle   = { fg = c.warning, bg = c.bg_dark },
 
   }
 end
