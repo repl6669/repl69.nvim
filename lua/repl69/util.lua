@@ -6,6 +6,8 @@ local M = {}
 M.bg = "#000000"
 M.fg = "#ffffff"
 
+M.brightness = 0.3
+
 local uv = vim.uv or vim.loop
 
 ---@param c  string
@@ -128,7 +130,7 @@ function M.invert(color)
       local hsl = hsluv.hex_to_hsluv(color)
       hsl[3] = 100 - hsl[3]
       if hsl[3] < 40 then
-        hsl[3] = hsl[3] + (100 - hsl[3]) * M.day_brightness
+        hsl[3] = hsl[3] + (100 - hsl[3]) * M.brightness
       end
       return hsluv.hsluv_to_hex(hsl)
     end
