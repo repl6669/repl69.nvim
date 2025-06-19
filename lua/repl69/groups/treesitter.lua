@@ -127,7 +127,7 @@ function M.get(c, opts)
     ["@markup.link.url"]        = { fg = c.gray300 },
     ["@markup.raw"]             = "String",
     ["@markup.raw.delimiter.markdown"] = { fg = c.gray500 },
-    ["@markup.raw.markdown_inline"] = { bg = c.gray900, fg = c.gray300 },
+    ["@markup.raw.markdown_inline"] = { fg = c.gray300 },
     ["@markup.list"]            = { fg = c.gray500 },
     ["@markup.list.checked"]    = { fg = c.gray200, bg = c.gray200 },
     ["@markup.list.unchecked"]  = { fg = c.gray50 },
