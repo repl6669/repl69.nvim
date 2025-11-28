@@ -11,6 +11,7 @@ M.plugins = {
   ["blink.cmp"] = "blink",
   ["bufferline.nvim"] = "bufferline",
   ["codeium.nvim"] = "codeium",
+  ["codecompanion.nvim"] = "codecompanion",
   ["copilot.lua"] = "copilot",
   ["dashboard-nvim"] = "dashboard",
   ["flash.nvim"] = "flash",
