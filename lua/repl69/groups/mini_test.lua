@@ -1,6 +1,6 @@
 local M = {}
 
-M.url = "https://github.com/echasnovski/mini.test"
+M.url = "https://github.com/nvim-mini/mini.test"
 
 ---@type repl69.HighlightsFn
 function M.get(c, opts)

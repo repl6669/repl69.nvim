@@ -2,7 +2,7 @@ local Util = require("repl69.util")
 
 local M = {}
 
-M.url = "https://github.com/echasnovski/mini.diff"
+M.url = "https://github.com/nvim-mini/mini.diff"
 
 ---@type repl69.HighlightsFn
 function M.get(c, opts)
