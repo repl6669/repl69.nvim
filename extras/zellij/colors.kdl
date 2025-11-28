@@ -108,8 +108,8 @@ themes {
       emphasis_3 0 0 0
     }
     multiplayer_user_colors {
-      player_1 220 74 0
-      player_2 9 170 111
+      player_1 9 170 111
+      player_2 220 74 0
       player_3 82 82 82
       player_4 102 102 102
       player_5 61 61 61
